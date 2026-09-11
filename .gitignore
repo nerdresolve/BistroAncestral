@@ -19,6 +19,11 @@ audit/_*.json
 Ancestral Design System/
 design/
 
+# Instrucoes de ferramentas de desenvolvimento
+AGENTS.md
+CLAUDE.md
+.claude/
+
 # Sistema
 .DS_Store
 Thumbs.db
