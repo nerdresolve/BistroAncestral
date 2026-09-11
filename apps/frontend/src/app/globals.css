@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/*
+ * Bistrô Ancestral — Ancestral Design System.
+ *
+ * Os tokens abaixo vêm do pacote "Ancestral Design System" entregue pelo
+ * cliente (pasta na raiz do repositório). Os arquivos em `src/styles/tokens/`
+ * são cópias fiéis dos originais; este arquivo apenas os importa, faz a ponte
+ * com o `next/font` e acrescenta o que é específico da aplicação.
+ *
+ * SUBSTITUI a paleta anterior, que eu havia derivado por medição do site em
+ * WordPress. Onde os dois discordam, vale o design system:
+ *   - fundo da página: creme (--sand-50), não branco
+ *   - ação principal: dendê #ce2717, não o laranja escurecido
+ *   - raio: "the brand is cut, not rounded" — quadrado por padrão
+ *   - profundidade: bloco duro deslocado, nunca sombra suave
+ *   - separação entre seções: faixa de padrão e marquee, não ondas
+ */
+@import "../styles/tokens/colors.css";
+@import "../styles/tokens/typography.css";
+@import "../styles/tokens/spacing.css";
+@import "../styles/tokens/shape.css";
+@import "../styles/tokens/elevation.css";
+@import "../styles/tokens/motion.css";
+@import "../styles/tokens/keyframes.css";
+@import "../styles/tokens/layout.css";
+@import "../styles/tokens/pattern.css";
+
+/*
+ * Ponte com o next/font.
+ *
+ * O DS declara as famílias por nome e carrega via @import do Google Fonts.
+ * Aqui as fontes entram pelo `next/font/google` (auto-hospedadas, sem request
+ * a terceiro e sem bloquear a pintura), que expõe cada uma numa variável
+ * própria. Estas três linhas religam os nomes do DS a essas variáveis, então
+ * todo `var(--font-display)` do sistema continua valendo.
+ */
+:root {
+  --font-display: var(--fonte-anton), "Archivo Black", Impact, sans-serif;
+  --font-text: var(--fonte-archivo), "Helvetica Neue", Arial, sans-serif;
+  --font-editorial: var(--fonte-instrument), Georgia, serif;
+}
+
+/* ---------------------------------------------------------------- */
+/* Base do DS (tokens/base.css), adaptada                            */
+/* ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-text);
+  font-size: var(--text-md);
+  line-height: var(--text-leading);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: var(--display-leading);
+  letter-spacing: var(--display-tracking);
+  margin: 0;
+}
+h1 { font-size: var(--display-xl); }
+h2 { font-size: var(--display-lg); }
+h3 { font-size: var(--display-md); }
+h4 { font-size: var(--display-sm); }
+
+p {
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--acafrao-500);
+  color: var(--ink-900);
+}
+
+.ds-eyebrow {
+  font-family: var(--font-text);
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+}
+
+.ds-measure {
+  max-width: var(--measure);
+}
+
+/*
+ * Rolagem suave para as âncoras. `scroll-padding-top` compensa o cabeçalho
+ * fixo: sem isso a âncora para embaixo dele e o título fica escondido.
+ * O bloco de movimento reduzido em `keyframes.css` já devolve o salto seco
+ * a quem pediu menos animação.
+ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h, 110px);
+}
