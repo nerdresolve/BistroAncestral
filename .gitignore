@@ -1,0 +1,24 @@
+# Credenciais: NUNCA versionar.
+.env
+.env.*
+!.env.example
+
+# Dependências e artefatos de build
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Relatórios e capturas de auditoria
+audit/_*.json
+
+# Material de trabalho, fora do repositório público:
+#   Ancestral Design System/  entregável de design do cliente (~14 MB)
+#   design/                   capturas do site anterior em WordPress
+Ancestral Design System/
+design/
+
+# Sistema
+.DS_Store
+Thumbs.db
