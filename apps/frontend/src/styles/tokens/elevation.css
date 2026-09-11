@@ -1,0 +1,15 @@
+:root{
+  /* No soft SaaS shadows. Depth comes from hard offset blocks (like a screenprint
+     mis-registration) and from image-protection gradients. */
+  --shadow-none:none;
+  --shadow-block-sm:4px 4px 0 var(--ink-900);
+  --shadow-block:8px 8px 0 var(--ink-900);
+  --shadow-block-dende:8px 8px 0 var(--dende-500);
+  --shadow-block-acafrao:8px 8px 0 var(--acafrao-500);
+  --shadow-lift:0 18px 40px -24px rgba(18,16,17,.45);  /* photography only */
+
+  /* Protection gradients for text over photography */
+  --scrim-bottom:linear-gradient(to top,rgba(18,16,17,.88) 0%,rgba(18,16,17,.55) 34%,rgba(18,16,17,0) 72%); /* @kind other */
+  --scrim-full:linear-gradient(to top,rgba(18,16,17,.82),rgba(18,16,17,.28)); /* @kind other */
+  --scrim-side:linear-gradient(to right,rgba(18,16,17,.85) 0%,rgba(18,16,17,.25) 55%,rgba(18,16,17,0) 100%); /* @kind other */
+}

@@ -1,0 +1,73 @@
+/* Base palette — sampled directly from the Ancestral wordmark tiles and from the
+   restaurant photography (terracotta walls, dark wood tables, cream brick). */
+:root{
+  /* Ink / warm neutrals */
+  --ink-900:#121011;--ink-800:#241f1d;--ink-700:#3a322e;--ink-600:#5a4e48;
+  --ink-500:#736660;--ink-400:#8c7f76;--ink-300:#b5a79b;
+  --sand-300:#d6c4ac;--sand-200:#e4d6c4;--sand-100:#f1e7d9;--sand-50:#f9f3ea;
+  --paper:#ffffff;
+
+  /* Dendê — logo red tile */
+  --dende-700:#8a1610;--dende-600:#a81c10;--dende-500:#ce2717;--dende-300:#e8827a;--dende-100:#f7ded9;
+  /* Açafrão — logo yellow tile */
+  --acafrao-700:#a06c05;--acafrao-600:#d9930a;--acafrao-500:#fbb81c;--acafrao-300:#fdd47a;--acafrao-100:#fdefcb;
+  /* Folha — logo green tile */
+  --folha-700:#356c14;--folha-600:#47901c;--folha-500:#63b52f;--folha-300:#a8d98a;--folha-100:#e2f2d5;
+  /* Terracota — interior walls */
+  --terracota-700:#7d422e;--terracota-600:#a05d45;--terracota-500:#c87e62;--terracota-300:#e0ae99;--terracota-100:#f4e2da;
+  /* Madeira — the wood tables everything is photographed on */
+  --madeira-900:#2a2320;--madeira-700:#443b35;--madeira-500:#6b544a;
+
+  /* Semantic — text */
+  --text-primary:var(--ink-900);
+  --text-secondary:var(--ink-600);
+  /* ink-400 dá 3,52:1 sobre o creme da página — abaixo do mínimo 4,5:1 da
+     WCAG (medido no Lighthouse). ink-500 dá 5,01:1 e mantém a hierarquia
+     entre primário, secundário e apagado. Única alteração feita nos tokens
+     do design system; o resto é cópia fiel. */
+  --text-muted:var(--ink-500);
+  --text-inverse:var(--sand-50);
+  --text-inverse-muted:var(--sand-300);
+  --text-accent:var(--dende-500);
+  --text-link:var(--dende-600);
+  --text-link-hover:var(--ink-900);
+
+  /* Semantic — surfaces */
+  --surface-page:var(--sand-50);
+  --surface-raised:var(--paper);
+  --surface-sand:var(--sand-100);
+  --surface-sand-deep:var(--sand-200);
+  --surface-ink:var(--ink-900);
+  --surface-madeira:var(--madeira-900);
+  --surface-terracota:var(--terracota-500);
+  --surface-dende:var(--dende-500);
+  --surface-acafrao:var(--acafrao-500);
+  --surface-folha:var(--folha-500);
+
+  /* Semantic — borders */
+  --border-strong:var(--ink-900);
+  --border-medium:var(--ink-300);
+  --border-subtle:var(--sand-200);
+  --border-inverse:var(--sand-300);
+
+  /* Semantic — interactive */
+  --action-primary-bg:var(--dende-500);
+  --action-primary-bg-hover:var(--dende-600);
+  --action-primary-fg:var(--sand-50);
+  --action-secondary-bg:var(--ink-900);
+  --action-secondary-bg-hover:var(--ink-700);
+  --action-secondary-fg:var(--sand-50);
+  --action-whatsapp-bg:var(--folha-500);
+  --action-whatsapp-bg-hover:var(--folha-600);
+  --action-whatsapp-fg:var(--ink-900);
+  --action-ghost-fg:var(--ink-900);
+  --action-disabled-bg:var(--sand-200);
+  --action-disabled-fg:var(--ink-400);
+  --focus-ring:var(--acafrao-500);
+
+  /* Semantic — feedback (kept deliberately small; the brand palette carries it) */
+  --feedback-success:var(--folha-600);
+  --feedback-warning:var(--acafrao-600);
+  --feedback-danger:var(--dende-600);
+  --feedback-info:var(--terracota-600);
+}

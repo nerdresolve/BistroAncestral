@@ -1,0 +1,13 @@
+:root{
+  /* The brand is cut, not rounded. Default to square; radius is the exception. */
+  --radius-none:0;
+  --radius-xs:2px;      /* tiles, chips */
+  --radius-sm:4px;      /* inputs */
+  --radius-pill:999px;  /* only for small counters/badges */
+  --radius-arch:50% 50% 0 0 / 42% 42% 0 0;   /* doorway / arch crop for portraits */
+  --radius-organic:58% 42% 47% 53% / 44% 56% 44% 56%; /* blob mask for image insets */
+
+  --border-1:1px;--border-2:2px;--border-3:3px;--border-hair:1px; /* @kind spacing */
+  --rule-strong:2px solid var(--border-strong); /* @kind other */
+  --rule-subtle:1px solid var(--border-subtle); /* @kind other */
+}

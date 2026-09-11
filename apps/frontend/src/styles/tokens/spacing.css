@@ -1,0 +1,12 @@
+:root{
+  --space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;
+  --space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;--space-10:128px;--space-11:176px;
+
+  --section-y:clamp(72px,10vw,160px); /* @kind spacing */      /* vertical rhythm between page sections */
+  --section-y-tight:clamp(48px,6vw,96px); /* @kind spacing */
+  --gutter:clamp(20px,5vw,72px); /* @kind spacing */            /* page side padding */
+  --measure:64ch; /* @kind spacing */                           /* max body line length */
+  --measure-narrow:44ch; /* @kind spacing */
+  --container:1440px; /* @kind spacing */
+  --container-narrow:880px; /* @kind spacing */
+}

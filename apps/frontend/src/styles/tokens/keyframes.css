@@ -1,0 +1,33 @@
+/* Named animations. Everything here is confident and linear-ish — no bounce, no spring.
+   All of it is disabled wholesale under prefers-reduced-motion at the bottom of this file. */
+
+@keyframes ancestral-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes ancestral-tile-pop{0%{transform:translateY(18px) scale(.7);opacity:0}60%{transform:translateY(0) scale(1)}100%{transform:translateY(0) scale(1);opacity:1}}
+@keyframes ancestral-wordmark-in{from{opacity:0;transform:translateY(14px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:translateY(0);clip-path:inset(0 0 0 0)}}
+@keyframes ancestral-curtain-up{from{transform:translateY(0)}to{transform:translateY(-101%)}}
+@keyframes ancestral-band-slide{from{background-position-x:0}to{background-position-x:120px}}
+@keyframes ancestral-pulse-ring{0%{box-shadow:0 0 0 0 rgba(99,181,47,.55)}70%{box-shadow:0 0 0 18px rgba(99,181,47,0)}100%{box-shadow:0 0 0 0 rgba(99,181,47,0)}}
+@keyframes ancestral-scroll-hint{0%{transform:translateY(0);opacity:0}25%{opacity:1}100%{transform:translateY(14px);opacity:0}}
+@keyframes ancestral-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes ancestral-menu-in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* Splash choreography — the panel must never sit still. */
+@keyframes ancestral-splash-zoom{from{transform:scale(1.16)}to{transform:scale(1.02)}}
+@keyframes ancestral-splash-progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes ancestral-tile-march{0%{transform:translateY(26px) scale(.6) rotate(-8deg);opacity:0}55%{transform:translateY(-4px) scale(1.06) rotate(2deg);opacity:1}100%{transform:translateY(0) scale(1) rotate(0deg);opacity:1}}
+@keyframes ancestral-tile-breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes ancestral-wordmark-wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes ancestral-drift-x{from{background-position-x:0}to{background-position-x:-120px}}
+@keyframes ancestral-rise-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+
+/* Utility hooks used by the motion components */
+.ds-marquee-track{animation:ancestral-marquee var(--dur-marquee) linear infinite}
+.ds-marquee:hover .ds-marquee-track{animation-play-state:paused}
+.ds-band-drift{animation:ancestral-band-slide 6s linear infinite}
+.ds-pulse{animation:ancestral-pulse-ring 2.6s var(--ease-out) infinite}
+.ds-scroll-hint{animation:ancestral-scroll-hint 1.9s var(--ease-out) infinite}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}

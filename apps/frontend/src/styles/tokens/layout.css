@@ -1,0 +1,30 @@
+/* Responsive layout utilities. The system is inline-style first, but breakpoints
+   cannot be expressed inline — these classes are the sanctioned way to lay out a
+   page so it collapses correctly on phones.
+   Breakpoints: 1000px (tablet), 680px (phone). */
+:root{
+  --bp-tablet:1000px; /* @kind spacing */
+  --bp-phone:680px; /* @kind spacing */
+}
+
+.ds-shell{max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+
+/* Editorial three-up (dishes, service points, stats) */
+.ds-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-7);align-items:start}
+/* Asymmetric two-column split; set the ratio inline with --split */
+.ds-split{display:grid;grid-template-columns:var(--split,1fr 1fr);gap:var(--section-y-tight);align-items:var(--split-align,start)}
+/* Optional baseline break on alternating items; set the offset inline with --stagger */
+.ds-stagger{margin-top:var(--stagger,0)}
+/* Row that wraps and keeps its actions right-aligned on desktop */
+.ds-row-between{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap}
+
+@media (max-width:1000px){
+  .ds-grid-3{grid-template-columns:repeat(2,1fr);gap:var(--space-6)}
+  .ds-split{grid-template-columns:1fr;gap:var(--space-8)}
+  .ds-stagger{margin-top:0}
+}
+@media (max-width:680px){
+  .ds-grid-3{grid-template-columns:1fr;gap:var(--space-7)}
+  .ds-hide-phone{display:none!important}
+}
+@media (min-width:861px){.ds-only-phone{display:none!important}}

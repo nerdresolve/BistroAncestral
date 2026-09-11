@@ -1,0 +1,26 @@
+/* Graphic language: bands of geometry abstracted from the mudcloth/kente-style
+   backdrop used in Ancestral's social imagery (assets/img/social-share-pattern.webp).
+   Built as CSS gradients so they tile at any size and re-color from tokens. */
+:root{
+  --pattern-ink:var(--ink-900); /* @kind other */
+  --pattern-bg:var(--sand-100); /* @kind other */
+
+  /* Vertical dash rhythm — the mustard "seed" row */
+  --pattern-dash:repeating-linear-gradient(90deg,var(--pattern-ink) 0 6px,transparent 6px 20px); /* @kind other */
+  /* Stacked rule stack — echoes the third glyph tile (the comb) */
+  --pattern-comb:repeating-linear-gradient(0deg,var(--pattern-ink) 0 3px,transparent 3px 11px); /* @kind other */
+  /* Diamond lattice — the kente diamond row */
+  --pattern-diamond:
+    linear-gradient(135deg,var(--pattern-ink) 25%,transparent 25%) -12px 0/24px 24px,
+    linear-gradient(225deg,var(--pattern-ink) 25%,transparent 25%) -12px 0/24px 24px,
+    linear-gradient(315deg,var(--pattern-ink) 25%,transparent 25%) 0 0/24px 24px,
+    linear-gradient(45deg,var(--pattern-ink) 25%,transparent 25%) 0 0/24px 24px; /* @kind other */
+  /* Stepped meander — the top border row */
+  --pattern-step:
+    linear-gradient(var(--pattern-ink) 0 0) 0 0/16px 6px no-repeat,
+    linear-gradient(var(--pattern-ink) 0 0) 16px 6px/6px 12px no-repeat,
+    linear-gradient(var(--pattern-ink) 0 0) 22px 12px/16px 6px no-repeat; /* @kind other */
+  --pattern-step-size:38px 18px; /* @kind other */
+
+  --pattern-band-height:22px; /* @kind other */
+}
