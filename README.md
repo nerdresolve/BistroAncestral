@@ -1,6 +1,6 @@
 <div align="center">
 
-# Bistrô Ancestral
+<img src="docs/brand/banner.svg" alt="Bistrô Ancestral: culinária afro-brasileira em Niterói" width="100%">
 
 Site institucional de um restaurante de culinária afro-brasileira em Niterói.
 Migração de WordPress para Next.js, com um único objetivo de negócio: levar
@@ -33,8 +33,8 @@ num clique que abre o WhatsApp, no mapa ou no telefone.
 
 Este projeto reconstrói o site em torno disso. O conteúdo saiu do banco do
 WordPress e virou dado tipado em `src/lib/`; a apresentação segue o sistema de
-design da marca; e os caminhos que levam ao salão — WhatsApp, mapa, telefone,
-cardápio — são medidos como conversão.
+design da marca; e os caminhos que levam ao salão, WhatsApp, mapa, telefone,
+cardápio, são medidos como conversão.
 
 ## As telas
 
@@ -70,21 +70,19 @@ primeira rolagem.
 
 ## Frontend
 
-Next.js com App Router. As seis rotas são geradas no build — não há banco nem
+Next.js com App Router. As seis rotas são geradas no build, não há banco nem
 API: o conteúdo é dado tipado, e mudar um prato é editar um arquivo.
 
 Decisões que sustentam o objetivo:
 
 * **Server Components por padrão.** Só vão para o cliente os componentes que
   precisam de estado: navegação, accordion, contador, player e os avisos.
-* **`next/font`** auto-hospeda Anton, Archivo e Instrument Serif no build —
-  sem requisição a terceiro e sem salto de layout na troca de fonte.
+* **`next/font`** auto-hospeda Anton, Archivo e Instrument Serif no build, sem requisição a terceiro e sem salto de layout na troca de fonte.
 * **Player de vídeo sob demanda.** O embed do YouTube só é montado no clique.
   Carregado junto com a página, ele registra cookie de terceiro e é o recurso
   mais pesado do site.
 * **Ícones SVG desenhados no projeto**, em vez de biblioteca por CDN.
-* **Consentimento de verdade.** O GTM só carrega depois do aceite de cookies —
-  no site anterior ele subia antes de qualquer clique.
+* **Consentimento de verdade.** O GTM só carrega depois do aceite de cookies, no site anterior ele subia antes de qualquer clique.
 * `sitemap.xml`, `robots.txt`, canonical, Open Graph e JSON-LD `Restaurant`
   com coordenadas, horário e cardápio.
 
@@ -123,7 +121,7 @@ Os cliques que levam ao salão disparam eventos no `dataLayer`:
 | `clique_mapa` | "Ver endereço no mapa" |
 | `clique_cardapio` | cardápio completo |
 
-Quem recusa cookies não é medido — a contagem fica abaixo do número real de
+Quem recusa cookies não é medido, a contagem fica abaixo do número real de
 cliques. É o custo de o consentimento valer de fato.
 
 ---
