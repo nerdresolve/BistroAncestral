@@ -16,7 +16,7 @@ import { RESTAURANTE } from '@/lib/restaurante'
  *
  * ATENÇÃO AO CONTEÚDO: a tela do DS traz seis pratos, três deles inexistentes
  * no site em produção ("Moqueca da Baiana", "Mesa Ancestral", "Vatapá de
- * Coco"), e reescreve as descrições dos três reais — trocando inclusive as de
+ * Coco"), e reescreve as descrições dos três reais, trocando inclusive as de
  * Caipora e Terra e Mar entre si. É texto de preenchimento, próprio de um
  * entregável de design.
  *

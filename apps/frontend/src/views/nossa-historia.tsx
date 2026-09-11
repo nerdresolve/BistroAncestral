@@ -13,13 +13,13 @@ import { RESTAURANTE } from '@/lib/restaurante'
  * (`ui_kits/site/StoryScreen.jsx`).
  *
  * ATENÇÃO AO CONTEÚDO: a tela do DS escreve uma narrativa de família
- * ("Cláudia cresceu entre panelas de barro… Max chegou depois, com a mania de
+ * ("Cláudia cresceu entre panelas de barro... Max chegou depois, com a mania de
  * perguntar de onde vem cada tempero") que NÃO consta de nenhuma fonte do
  * site em produção. É texto de preenchimento, e publicar história de família
  * inventada sobre pessoas reais é pior do que não publicar.
  *
  * Esta página usa, então, só o que existe: o texto institucional do site, os
- * números confirmados e os três depoimentos em vídeo — que são, eles próprios,
+ * números confirmados e os três depoimentos em vídeo, que são, eles próprios,
  * a história contada pelos donos. Quando a casa passar o texto real, entra no
  * lugar do bloco marcado abaixo.
  */

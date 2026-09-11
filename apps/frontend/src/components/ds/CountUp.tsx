@@ -9,7 +9,7 @@ import { useEffect, useRef, useState, type CSSProperties } from 'react'
  * Independente de ambiente, pelo mesmo motivo do `Reveal`: em alguns
  * contextos (renderização fora de tela, shell de impressão, pipeline de
  * screenshot) nem `requestAnimationFrame`, nem `IntersectionObserver`, nem
- * eventos de rolagem disparam — só temporizadores. Confiar em qualquer um
+ * eventos de rolagem disparam, só temporizadores. Confiar em qualquer um
  * deles deixaria o número congelado em zero para sempre.
  */
 
@@ -17,8 +17,7 @@ type Tom = 'dende' | 'acafrao' | 'folha' | 'ink' | 'sand'
 
 /*
  * Dois conjuntos: os tons vivos do DS valem sobre fundo ESCURO, onde têm
- * contraste de sobra. Sobre o creme da página eles reprovam na WCAG —
- * medido: açafrão #fbb81c dá 1,59:1 e folha #63b52f dá 2,33:1, contra o
+ * contraste de sobra. Sobre o creme da página eles reprovam na WCAG, * medido: açafrão #fbb81c dá 1,59:1 e folha #63b52f dá 2,33:1, contra o
  * mínimo de 4,5:1. Nem o açafrão-700 alcança (4,10:1), então a estatística
  * em açafrão usa dendê-600 no claro. São todos tons da própria paleta.
  */

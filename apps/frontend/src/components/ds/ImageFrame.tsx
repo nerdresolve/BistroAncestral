@@ -5,13 +5,13 @@ import type { CSSProperties } from 'react'
  * Contêiner de fotografia do sistema, portado do Ancestral Design System
  * (`components/content/ImageFrame.jsx`).
  *
- * Corte reto por padrão — "the brand is cut, not rounded" —, com bloco
+ * Corte reto por padrão, "the brand is cut, not rounded" -, com bloco
  * deslocado atrás e legenda opcional. `arch` e `organic` são as duas exceções
  * de raio previstas pelo DS.
  *
  * Diferença em relação ao original: o zoom no hover sai por CSS (`group-hover`)
  * em vez de estado no React, e a foto passa pelo `next/image`. Assim o
- * componente fica no servidor — numa página que recebe anúncio, cada
+ * componente fica no servidor, numa página que recebe anúncio, cada
  * componente que não precisa ir para o cliente é JavaScript que ninguém baixa.
  */
 

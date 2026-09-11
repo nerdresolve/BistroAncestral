@@ -2,7 +2,7 @@
  * Dados institucionais do Bistrô Ancestral.
  *
  * Origem: extração do site em produção com Chrome (`extrair.mjs`), que lê o
- * DOM renderizado — e não o HTML-fonte. Foi assim que apareceram os destinos
+ * DOM renderizado, e não o HTML-fonte. Foi assim que apareceram os destinos
  * reais dos botões, diferentes dos que o HTML sugeria.
  *
  * DIVERGÊNCIAS DO SITE DE ORIGEM, mantidas como estão até você decidir:
@@ -37,7 +37,7 @@ export const RESTAURANTE = {
 
   /**
    * Coordenadas do marcador oficial no Google Maps (parametros !3d/!4d do
-   * link resolvido) — e nao o centro do mapa (@), que fica ~260 m deslocado.
+   * link resolvido), e nao o centro do mapa (@), que fica ~260 m deslocado.
    * Alimentam o `geo` do JSON-LD: e o que mais pesa na busca local
    * ("restaurante perto de mim") e no pacote de mapas.
    */
@@ -47,7 +47,7 @@ export const RESTAURANTE = {
   nomeGoogle: 'Bistrô Ancestral Restaurante - Niterói',
 
   /**
-   * O botão do telefone aponta para este encurtador — NÃO para um link
+   * O botão do telefone aponta para este encurtador, NÃO para um link
    * `wa.me` montado à mão. Medido no site em produção.
    */
   whatsappLink: 'https://wa.link/1ak96u',
@@ -78,7 +78,7 @@ export const RESTAURANTE = {
 
   external: {
     /* Medido no botão "Ver endereço no mapa" da home. A página /links usa
-       OUTRO link de mapa (BULt3jZ7ncQVAw3R9) — os dois existem no site. */
+       OUTRO link de mapa (BULt3jZ7ncQVAw3R9), os dois existem no site. */
     maps: 'https://maps.app.goo.gl/MKxZYRMX2R2NYSDYA',
     mapsLinks: 'https://maps.app.goo.gl/BULt3jZ7ncQVAw3R9',
     cardapio:
@@ -93,7 +93,7 @@ export const RESTAURANTE = {
 
   /**
    * Âncora da seção da oferta. TODOS os botões "Venha viver essa experiência"
-   * do site apontam para cá — e não para o WhatsApp, como parecia.
+   * do site apontam para cá, e não para o WhatsApp, como parecia.
    */
   /** Id do vídeo do YouTube usado pela fachada em "Como chegar". */
   videoId: 'eGxuIUODxAk',

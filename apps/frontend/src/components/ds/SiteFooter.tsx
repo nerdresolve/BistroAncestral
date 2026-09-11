@@ -9,7 +9,7 @@ import { RESTAURANTE } from '@/lib/restaurante'
 /**
  * Rodapé, portado do Ancestral Design System (`ui_kits/site/SiteChrome.jsx`).
  *
- * Abre com o marquee em dendê — o dispositivo de ritmo do sistema — e fecha
+ * Abre com o marquee em dendê, o dispositivo de ritmo do sistema, e fecha
  * com três colunas: marca, navegação e dados da casa.
  *
  * O link para a política de privacidade é acréscimo desta aplicação: no DS
@@ -109,7 +109,7 @@ export default function SiteFooter() {
               <InfoRow icone="map-pin" rotulo="Nosso endereço" inverso>
                 {RESTAURANTE.address.street}
                 <br />
-                {RESTAURANTE.address.district}, {RESTAURANTE.address.city} — {RESTAURANTE.address.state},{' '}
+                {RESTAURANTE.address.district}, {RESTAURANTE.address.city}, {RESTAURANTE.address.state},{' '}
                 {RESTAURANTE.address.zip}
               </InfoRow>
               <InfoRow icone="clock" rotulo="Horário de funcionamento" inverso>

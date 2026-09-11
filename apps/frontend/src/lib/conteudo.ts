@@ -4,14 +4,14 @@
  *
  * GRAFIA CORRIGIDA conforme sua decisão. Cada correção está anotada com
  * `ORIGINAL:` na linha de cima, para você conferir uma a uma e reverter o
- * que quiser. Nada de conteúdo foi alterado — só ortografia e acentuação.
+ * que quiser. Nada de conteúdo foi alterado, só ortografia e acentuação.
  */
 
 /**
- * Accordion 1 — "Mais pedidos", na seção do cardápio.
+ * Accordion 1, "Mais pedidos", na seção do cardápio.
  *
  * Cada item traz a SUA foto: no original, abrir o item troca a imagem da
- * coluna ao lado. As fotos foram descobertas clicando item a item — não
+ * coluna ao lado. As fotos foram descobertas clicando item a item, não
  * constam do HTML inicial.
  */
 export const DESTAQUES = [
@@ -19,14 +19,14 @@ export const DESTAQUES = [
     nome: 'Camarú (P/2)',
     descricao: 'Bobó de camarão com arroz de coco e farofa crocante.',
     foto: '/fotos/namesa-baiana.webp',
-    fotoAlt: 'Camarú — bobó de camarão com arroz de coco e farofa',
+    fotoAlt: 'Camarú, bobó de camarão com arroz de coco e farofa',
   },
   {
     nome: 'Caipora',
     descricao:
       'Barriga de porco e risoto finalizado com ervas e demi-glace de redução de porco.',
     foto: '/fotos/prato-caipora.webp',
-    fotoAlt: 'Caipora — barriga de porco com risoto',
+    fotoAlt: 'Caipora, barriga de porco com risoto',
   },
   {
     // ORIGINAL: "Pastel de fuba recheado com polvo e linguiça de porco"
@@ -34,11 +34,11 @@ export const DESTAQUES = [
     descricao:
       'Pastel de fubá recheado com polvo e linguiça de porco, acompanhado de vinagrete.',
     foto: '/fotos/prato-terra-e-mar.webp',
-    fotoAlt: 'Terra e Mar — pastel de fubá com polvo e linguiça',
+    fotoAlt: 'Terra e Mar, pastel de fubá com polvo e linguiça',
   },
 ] as const
 
-/** Accordion 2 — "Serviços oferecidos:", na seção Comodidade. */
+/** Accordion 2, "Serviços oferecidos:", na seção Comodidade. */
 export const SERVICOS = [
   {
     titulo: 'Ambiente Acolhedor & Familiar',
@@ -65,7 +65,7 @@ export const SERVICOS = [
   },
 ] as const
 
-/** Accordion 3 — FAQ. */
+/** Accordion 3, FAQ. */
 export const FAQ = [
   {
     pergunta: 'Quais são os horários de funcionamento?',
@@ -140,7 +140,7 @@ export const TEXTOS = {
  * Faixa de estatísticas.
  *
  * O número fica separado do texto porque o `CountUp` do design system anima a
- * contagem a partir do zero — precisa do valor como número, não como string.
+ * contagem a partir do zero, precisa do valor como número, não como string.
  * Cada um recebe um dos três tons da marca, na ordem dos ladrilhos do
  * logotipo: dendê, açafrão, folha.
  */
@@ -169,7 +169,7 @@ export const ESTATISTICAS = [
   },
 ] as const
 
-/** Pop-up da promoção. A frase muda todo mês — é o campo mais editado. */
+/** Pop-up da promoção. A frase muda todo mês, é o campo mais editado. */
 export const CASHBACK = {
   ativo: true,
   percentual: 10,

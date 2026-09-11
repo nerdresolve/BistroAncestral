@@ -11,7 +11,7 @@ import { RESTAURANTE } from '@/lib/restaurante'
  *
  * UMA MUDANÇA DELIBERADA: o DS traz um formulário de reserva completo (nome,
  * WhatsApp, data, número de pessoas, refeição, observação) cujo `onSubmit`
- * apenas troca um estado para "enviado" — não manda nada a lugar nenhum.
+ * apenas troca um estado para "enviado", não manda nada a lugar nenhum.
  * Num protótipo isso demonstra o layout; no ar, seria um formulário que
  * engole pedidos de mesa em silêncio, e o visitante sai achando que reservou.
  *
@@ -114,7 +114,7 @@ export default function ComoChegarView() {
                 <InfoRow icone="map-pin" rotulo="Nosso endereço">
                   {RESTAURANTE.address.street}
                   <br />
-                  {RESTAURANTE.address.district}, {RESTAURANTE.address.city} —{' '}
+                  {RESTAURANTE.address.district}, {RESTAURANTE.address.city} -{' '}
                   {RESTAURANTE.address.state}, {RESTAURANTE.address.zip}
                 </InfoRow>
                 <InfoRow icone="clock" rotulo="Horário de funcionamento">

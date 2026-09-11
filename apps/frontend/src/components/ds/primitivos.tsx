@@ -3,13 +3,13 @@ import Icon from './Icon'
 
 /**
  * Primitivos do Ancestral Design System: GlyphTiles, SectionLabel, InfoRow,
- * Divider e QuoteBlock. Todos são componentes de servidor — nenhum precisa de
+ * Divider e QuoteBlock. Todos são componentes de servidor, nenhum precisa de
  * estado, e numa página de campanha cada componente que não vai para o cliente
  * é JavaScript que ninguém baixa.
  */
 
 /* ------------------------------------------------------------------ */
-/* GlyphTiles — os três ladrilhos tirados do logotipo                  */
+/* GlyphTiles, os três ladrilhos tirados do logotipo                  */
 /* ------------------------------------------------------------------ */
 
 const LADRILHOS = [
@@ -58,7 +58,7 @@ export function GlyphTiles({
 }
 
 /* ------------------------------------------------------------------ */
-/* SectionLabel — o olho-d'água que abre quase toda seção              */
+/* SectionLabel, o olho-d'água que abre quase toda seção              */
 /* ------------------------------------------------------------------ */
 
 type Tom = 'dende' | 'acafrao' | 'folha'
@@ -111,7 +111,7 @@ export function SectionLabel({
 }
 
 /* ------------------------------------------------------------------ */
-/* InfoRow — ícone + rótulo + valor (endereço, horário, telefone)      */
+/* InfoRow, ícone + rótulo + valor (endereço, horário, telefone)      */
 /* ------------------------------------------------------------------ */
 
 export function InfoRow({
@@ -184,7 +184,7 @@ export function InfoRow({
 }
 
 /* ------------------------------------------------------------------ */
-/* QuoteBlock — citação em serifa editorial                            */
+/* QuoteBlock, citação em serifa editorial                            */
 /* ------------------------------------------------------------------ */
 
 export function QuoteBlock({
@@ -215,7 +215,7 @@ export function QuoteBlock({
 }
 
 /* ------------------------------------------------------------------ */
-/* PatternBand — faixa de geometria ancestral entre seções             */
+/* PatternBand, faixa de geometria ancestral entre seções             */
 /* ------------------------------------------------------------------ */
 
 type Motivo = 'dash' | 'comb' | 'diamond' | 'step'

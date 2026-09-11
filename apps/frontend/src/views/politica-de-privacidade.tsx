@@ -5,7 +5,7 @@ import { RESTAURANTE } from '@/lib/restaurante'
 /**
  * Política de Privacidade, transcrita do site legado.
  *
- * O texto é jurídico e foi mantido palavra por palavra — mexer na redação de
+ * O texto é jurídico e foi mantido palavra por palavra, mexer na redação de
  * um documento de LGPD sem revisão não é decisão de migração. As únicas
  * mudanças são estruturais: a numeração virou <section>, as listas viraram
  * <ul>, e o endereço passou a sair de `RESTAURANTE` para não divergir do
@@ -13,12 +13,11 @@ import { RESTAURANTE } from '@/lib/restaurante'
  *
  * O e-mail de contato ficou de fora: no WordPress ele vinha ofuscado pelo
  * plugin anti-spam ("[email protected]") e não sobreviveu à extração.
- * Precisa ser preenchido antes de publicar — a seção 10 exige um canal.
+ * Precisa ser preenchido antes de publicar, a seção 10 exige um canal.
  *
  * APRESENTAÇÃO refeita sobre o Ancestral Design System. A versão anterior
  * montava o próprio `<SiteHeader />` (hoje o cabeçalho vem do layout, então
- * a página exibia DOIS) e pintava tudo com tokens da paleta antiga —
- * `cinza-600`, `vinho-700` —, que a migração removeu. Sem token, o Tailwind
+ * a página exibia DOIS) e pintava tudo com tokens da paleta antiga, * `cinza-600`, `vinho-700` -, que a migração removeu. Sem token, o Tailwind
  * não emite classe nenhuma e o texto saía sem estilo.
  */
 
@@ -83,7 +82,7 @@ const SECOES = [
       'Limitar e se opor ao tratamento de dados;',
       'Revogar o consentimento previamente concedido, nos termos da lei;',
       'Pedir revisão das decisões baseadas unicamente em tratamento automatizado de dados pessoais que afetem seus interesses e obter informações sobre os critérios utilizados para essas decisões automatizadas (algoritmos);',
-      'Dentre outros…',
+      'Dentre outros...',
     ],
   },
   {
@@ -133,7 +132,7 @@ export default function PoliticaDePrivacidadeView() {
       <section style={{ background: 'var(--surface-page)', padding: 'var(--section-y) 0' }}>
         {/* `ds-shell` para o corpo nascer no MESMO eixo do <h1> do cabeçalho
             (x = --gutter). Com `container-narrow` centralizado, o título
-            começava em 72px e o texto em ~426px — dois eixos diferentes na
+            começava em 72px e o texto em ~426px, dois eixos diferentes na
             mesma página. A coluna de leitura continua estreita, agora por
             `--measure` no bloco de texto, não por centralização do container. */}
         <div className="ds-shell">

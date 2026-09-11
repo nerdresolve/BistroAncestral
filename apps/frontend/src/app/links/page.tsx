@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import LinksView from '@/views/links'
 
 /**
- * No WordPress esta página vivia em /bistroancestral/bistrolinks/ — um
+ * No WordPress esta página vivia em /bistroancestral/bistrolinks/, um
  * caminho herdado da estrutura do tema, sem valor para quem lê. Aqui ela
  * passa a ser /links; o redirecionamento do endereço antigo é feito no
  * servidor, junto com o corte de DNS.

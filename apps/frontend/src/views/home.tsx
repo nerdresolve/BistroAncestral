@@ -17,8 +17,8 @@ import { faqSchema } from '@/lib/schema'
 /**
  * Home, montada sobre o Ancestral Design System (`ui_kits/site/HomeScreen.jsx`).
  *
- * O conteúdo vem de `lib/conteudo.ts` e `lib/restaurante.ts` — os textos e
- * dados extraídos do site em produção — e não fica escrito aqui: quem edita o
+ * O conteúdo vem de `lib/conteudo.ts` e `lib/restaurante.ts`, os textos e
+ * dados extraídos do site em produção, e não fica escrito aqui: quem edita o
  * cardápio não deveria precisar abrir um componente.
  *
  * Seções, na ordem do sistema:
@@ -238,7 +238,7 @@ export default function HomeView() {
                 zoom={false}
                 /* A moldura tem 220px, mas em tela retina isso pede ~440px
                    reais. Com `sizes="220px"` o otimizador entregava 178px de
-                   largura natural — a foto trocada continuava borrada, agora
+                   largura natural, a foto trocada continuava borrada, agora
                    por resolução insuficiente e não por ser quadro de vídeo. */
                 sizes="440px"
               />
@@ -499,7 +499,7 @@ export default function HomeView() {
               <InfoRow icone="map-pin" rotulo="Nosso endereço">
                 {RESTAURANTE.address.street}
                 <br />
-                {RESTAURANTE.address.district}, {RESTAURANTE.address.city} — {RESTAURANTE.address.state},{' '}
+                {RESTAURANTE.address.district}, {RESTAURANTE.address.city}, {RESTAURANTE.address.state},{' '}
                 {RESTAURANTE.address.zip}
               </InfoRow>
               <InfoRow icone="clock" rotulo="Horário de funcionamento">
@@ -541,7 +541,7 @@ export default function HomeView() {
               alt="Varanda do Bistrô Ancestral"
               proporcao="4 / 3"
               bloco="folha"
-              legenda="Engenho do Mato — Região Oceânica de Niterói"
+              legenda="Engenho do Mato, Região Oceânica de Niterói"
             />
           </Reveal>
         </div>

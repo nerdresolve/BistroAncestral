@@ -8,7 +8,7 @@ import { EVENTO_CONSENTIMENTO, lerConsentimento } from '@/lib/consentimento'
  * Google Tag Manager, carregado SOMENTE após o aceite de cookies.
  *
  * O contêiner é o mesmo do site em WordPress (`GTM-KTKQZQTP`), então as tags
- * e conversões já configuradas no painel seguem valendo — a diferença é o
+ * e conversões já configuradas no painel seguem valendo, a diferença é o
  * momento da carga: lá o GTM subia antes de qualquer clique, aqui espera o
  * consentimento.
  *

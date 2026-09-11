@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/fotos/social-share-pattern.webp',
-        alt: `${RESTAURANTE.name} — ${RESTAURANTE.tagline}`,
+        alt: `${RESTAURANTE.name}, ${RESTAURANTE.tagline}`,
       },
     ],
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
  * Chrome compartilhada pelas quatro telas do Ancestral Design System.
  *
  * Cabeçalho, rodapé, WhatsApp flutuante, cortina de entrada e aviso de
- * cookies vivem aqui — no layout, e não em cada página: assim a navegação
+ * cookies vivem aqui, no layout, e não em cada página: assim a navegação
  * entre rotas não remonta nada disso, e o estado da gaveta e do splash
  * sobrevive à troca de tela.
  */

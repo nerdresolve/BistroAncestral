@@ -69,7 +69,7 @@ async function main() {
         perfil === 'desktop' ? CFG_DESKTOP : undefined,
       )
       if (!r) {
-        console.log(`  ${rota} — sem resultado`)
+        console.log(`  ${rota}, sem resultado`)
         continue
       }
 
@@ -127,7 +127,7 @@ async function main() {
   if (ord.length) {
     console.log('\n--- auditorias a corrigir (por impacto) ---')
     for (const p of ord.slice(0, 14)) {
-      console.log(`  [${p.cat}] ${p.id} — ${p.titulo.slice(0, 58)}`)
+      console.log(`  [${p.cat}] ${p.id}, ${p.titulo.slice(0, 58)}`)
       console.log(`      peso=${p.peso.toFixed(1)} em ${p.rotas.length} páginas ${p.exemplo ? `· ${p.exemplo}` : ''}`)
     }
   }

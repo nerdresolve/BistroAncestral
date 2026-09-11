@@ -13,11 +13,11 @@ import { useEffect, useState, useSyncExternalStore } from 'react'
  * painel inteiro sobe como um pano puxado.
  *
  * A MARCA É IMAGEM, NUNCA TEXTO: o `tokens/fonts.css` do sistema é explícito
- * — o logotipo é letreiramento desenhado à mão e não é fonte licenciada, então
+ *, o logotipo é letreiramento desenhado à mão e não é fonte licenciada, então
  * usa-se sempre o arquivo da marca. Uma versão anterior deste componente
  * redigitava "Bistrô Ancestral" em Anton, que é justamente o que o DS proíbe.
  *
- * DIFERENÇA EM RELAÇÃO AO DS: o original usa `sessionStorage` — a cortina
+ * DIFERENÇA EM RELAÇÃO AO DS: o original usa `sessionStorage`, a cortina
  * volta a cada nova sessão do navegador. Por decisão sua, aqui é
  * `localStorage`: roda na PRIMEIRA visita e quem já visitou entra direto.
  *
@@ -25,7 +25,7 @@ import { useEffect, useState, useSyncExternalStore } from 'react'
  * não do inicializador do `useState` nem de um efeito.
  *
  *   - No inicializador, servidor e cliente renderizam estados diferentes e o
- *     React derruba a árvore inteira (erro #418) — acontecia em todas as
+ *     React derruba a árvore inteira (erro #418), acontecia em todas as
  *     páginas, já que o splash vive no layout.
  *   - Num efeito com `setState`, resolve a hidratação mas cai na regra
  *     `react-hooks/set-state-in-effect`.
@@ -63,7 +63,7 @@ export default function SplashScreen({
   imagem?: string
 }) {
   /* `jaViu` vem do armazenamento externo. No servidor é sempre `true`, então
-     o HTML entregue nunca traz a cortina — quem já visitou não vê nem um
+     o HTML entregue nunca traz a cortina, quem já visitou não vê nem um
      piscar dela. */
   const jaViu = useSyncExternalStore(assinar, lerJaViu, () => true)
 

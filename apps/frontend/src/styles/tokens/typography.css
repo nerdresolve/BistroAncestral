@@ -3,13 +3,13 @@
   --font-text:"Archivo","Helvetica Neue",Arial,sans-serif;     /* UI + body */
   --font-editorial:"Instrument Serif",Georgia,serif;           /* dish names, pull quotes */
 
-  /* Display — always uppercase, always tight, always stacked in 2-4 short lines */
+  /* Display, always uppercase, always tight, always stacked in 2-4 short lines */
   --display-2xl:clamp(4rem,11vw,10.5rem); /* @kind font */
   --display-xl:clamp(3.25rem,7.5vw,6.5rem); /* @kind font */
   --display-lg:clamp(2.5rem,5vw,4.25rem); /* @kind font */
   --display-md:clamp(2rem,3.4vw,3rem); /* @kind font */
   --display-sm:1.5rem;
-  /* Never tighter than .92 — Portuguese accented caps (Ç Ã Õ Á É) need the headroom. */
+  /* Never tighter than .92, Portuguese accented caps (Ç Ã Õ Á É) need the headroom. */
   --display-leading:0.92; /* @kind font */
   --display-tracking:-0.02em; /* @kind font */
 
@@ -29,7 +29,7 @@
   --text-leading:1.55; /* @kind font */
   --text-leading-tight:1.3; /* @kind font */
 
-  /* Eyebrow / label — wide-tracked caps, the system's connective tissue */
+  /* Eyebrow / label, wide-tracked caps, the system's connective tissue */
   --label-size:0.6875rem;
   --label-tracking:0.22em; /* @kind font */
   --label-weight:700; /* @kind font */

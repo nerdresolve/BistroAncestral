@@ -8,7 +8,7 @@ import typescript from 'eslint-config-next/typescript'
  * A ponte `FlatCompat` (usada no Coral, que veio de uma versão anterior)
  * quebra aqui: ela passa o preset pelo validador legado do `@eslint/eslintrc`,
  * que faz `JSON.stringify` num objeto onde o plugin `react` se referencia a
- * si mesmo — e estoura "Converting circular structure to JSON" antes de
+ * si mesmo, e estoura "Converting circular structure to JSON" antes de
  * lintar qualquer arquivo.
  */
 const eslintConfig = [

@@ -11,7 +11,7 @@ import { registrarConversao, type EventoConversao } from '@/lib/consentimento'
  *
  * Corte reto, caixa alta com entrelinhamento largo e bloco duro deslocado
  * atrás, no qual o botão afunda ao ser pressionado. Sem gradiente, sem sombra
- * suave, sem pílula — o sistema é explícito nisso.
+ * suave, sem pílula, o sistema é explícito nisso.
  *
  * Acréscimo desta aplicação: `conversao`, que registra o clique no dataLayer.
  * São estes cliques (WhatsApp, mapa, telefone, cardápio) que a campanha conta

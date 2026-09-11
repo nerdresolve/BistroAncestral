@@ -1,10 +1,10 @@
 /**
- * Consentimento de cookies — fonte única para o banner e para o GTM.
+ * Consentimento de cookies, fonte única para o banner e para o GTM.
  *
  * ATENÇÃO ao que muda em relação ao site antigo: lá o banner era decorativo.
  * O GTM (`GTM-KTKQZQTP`) carregava junto com a página, antes de qualquer
  * clique, então "Aceitar" não decidia nada. Aqui o GTM só entra DEPOIS do
- * aceite — é o que a LGPD espera de um pedido de consentimento.
+ * aceite, é o que a LGPD espera de um pedido de consentimento.
  *
  * Consequência prática para a campanha: visitante que recusa não é medido.
  * É o custo de fazer certo; a alternativa é medir quem disse não.
@@ -45,7 +45,7 @@ declare global {
 
 /**
  * Ações que levam o visitante ao restaurante físico. São ESTAS que a
- * campanha precisa contar como conversão — não o pageview.
+ * campanha precisa contar como conversão, não o pageview.
  */
 export type EventoConversao =
   | 'clique_whatsapp'

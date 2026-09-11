@@ -8,12 +8,12 @@ import { RESTAURANTE, whatsappHref } from '@/lib/restaurante'
 const MSG_RESERVA = 'Olá! Gostaria de fazer uma reserva no Bistrô Ancestral.'
 
 /**
- * BistroLinks — a página que vive na bio do Instagram.
+ * BistroLinks, a página que vive na bio do Instagram.
  *
  * Não traz cabeçalho nem rodapé de propósito: é tela de destino de rede
  * social, onde qualquer navegação a mais disputa o clique com os quatro
  * cartões. O site legado fazia igual. Por isso ela também fica fora do
- * `layout.tsx` padrão — ver `app/links/layout.tsx`.
+ * `layout.tsx` padrão, ver `app/links/layout.tsx`.
  *
  * APRESENTAÇÃO refeita sobre o Ancestral Design System. A versão anterior
  * pintava tudo com tokens da paleta antiga (`bg-cinza-900`, `text-cinza-200`,
@@ -166,7 +166,7 @@ export default function LinksView() {
       </ul>
 
       {/* O texto do link precisa dizer para onde leva: "Clique aqui" sozinho
-          não significa nada fora de contexto — nem para quem navega saltando
+          não significa nada fora de contexto, nem para quem navega saltando
           de link em link com leitor de tela, nem para o Lighthouse. */}
       <Reveal variante="up" atraso={200}>
         <p

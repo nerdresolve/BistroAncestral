@@ -13,7 +13,7 @@ import { aceitarCookies, EVENTO_CONSENTIMENTO, lerConsentimento } from '@/lib/co
  * rótulo do botão são os do site.
  *
  * ATENÇÃO: isto reproduz o aviso, não um mecanismo de consentimento. O
- * banner original também não bloqueava nada — o GTM (`GTM-KTKQZQTP`) carrega
+ * banner original também não bloqueava nada, o GTM (`GTM-KTKQZQTP`) carrega
  * antes de qualquer clique. Se a intenção for consentimento de verdade sob a
  * LGPD, os scripts precisam esperar a escolha, e aí isto vira outra coisa.
  */

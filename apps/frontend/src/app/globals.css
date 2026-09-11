@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Bistrô Ancestral — Ancestral Design System.
+ * Bistrô Ancestral, Ancestral Design System.
  *
  * Os tokens abaixo vêm do pacote "Ancestral Design System" entregue pelo
  * cliente (pasta na raiz do repositório). Os arquivos em `src/styles/tokens/`
@@ -12,7 +12,7 @@
  * WordPress. Onde os dois discordam, vale o design system:
  *   - fundo da página: creme (--sand-50), não branco
  *   - ação principal: dendê #ce2717, não o laranja escurecido
- *   - raio: "the brand is cut, not rounded" — quadrado por padrão
+ *   - raio: "the brand is cut, not rounded", quadrado por padrão
  *   - profundidade: bloco duro deslocado, nunca sombra suave
  *   - separação entre seções: faixa de padrão e marquee, não ondas
  */

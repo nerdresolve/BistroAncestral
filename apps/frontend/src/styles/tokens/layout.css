@@ -1,5 +1,5 @@
 /* Responsive layout utilities. The system is inline-style first, but breakpoints
-   cannot be expressed inline — these classes are the sanctioned way to lay out a
+   cannot be expressed inline, these classes are the sanctioned way to lay out a
    page so it collapses correctly on phones.
    Breakpoints: 1000px (tablet), 680px (phone). */
 :root{

@@ -4,13 +4,13 @@ import type { CSSProperties } from 'react'
  * Faixa horizontal infinita de frases, separadas por ladrilhos da marca.
  * Portada do Ancestral Design System (`components/motion/Marquee.jsx`).
  *
- * É o dispositivo de ritmo do sistema entre seções — lê como a borda de um
+ * É o dispositivo de ritmo do sistema entre seções, lê como a borda de um
  * tecido estampado. Substitui as ondas SVG que este projeto usava antes: o DS
  * separa seções com padrão e marquee, não com curvas.
  *
  * Componente de servidor: a animação é CSS puro (`ds-marquee-track`, definida
  * em `tokens/keyframes.css`), então não precisa de JavaScript no cliente.
- * `aria-hidden` porque é ornamento — o texto se repete e não acrescenta nada
+ * `aria-hidden` porque é ornamento, o texto se repete e não acrescenta nada
  * a quem usa leitor de tela.
  */
 

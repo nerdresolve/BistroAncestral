@@ -8,9 +8,9 @@ import './globals.css'
  * Casca do layout raiz.
  *
  * Tipografia do Ancestral Design System (`tokens/fonts.css`):
- *   Anton            — display, sempre em caixa alta, empilhado em 2–4 linhas
- *   Archivo          — interface e corpo de texto
- *   Instrument Serif — nomes de prato e citações
+ *   Anton, display, sempre em caixa alta, empilhado em 2 a 4 linhas
+ *   Archivo, interface e corpo de texto
+ *   Instrument Serif, nomes de prato e citações
  *
  * O DS carrega as três por `@import` do Google Fonts. Aqui elas entram pelo
  * `next/font/google`, que as auto-hospeda: sem requisição a terceiro, sem
@@ -19,7 +19,7 @@ import './globals.css'
  * sistema usa (`--font-display`, `--font-text`, `--font-editorial`).
  *
  * NOTA do próprio DS: o logotipo é letreiramento desenhado à mão e NÃO é
- * fonte licenciada — usar sempre a imagem da marca, nunca redigitar. Por isso
+ * fonte licenciada, usar sempre a imagem da marca, nunca redigitar. Por isso
  * o cabeçalho e o rodapé trazem os arquivos de `public/brand/`.
  */
 const anton = Anton({

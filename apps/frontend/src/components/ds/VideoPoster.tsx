@@ -8,11 +8,11 @@ import Icon from './Icon'
  * Porta de entrada do vídeo, portada do Ancestral Design System
  * (`components/content/VideoPoster.jsx`): quadro estático, véu e um controle
  * de play grande. O vídeo do Ancestral é vertical, gravado no celular e
- * humano — a moldura fica de corte reto, sem arredondamento.
+ * humano, a moldura fica de corte reto, sem arredondamento.
  *
  * Acréscimo desta aplicação: o player só é montado no clique. Enquanto o
  * iframe do YouTube carrega junto com a página, o Chrome registra cookie de
- * terceiro e o `best-practices` do Lighthouse trava em 96 — trocar para
+ * terceiro e o `best-practices` do Lighthouse trava em 96, trocar para
  * `youtube-nocookie` não resolve, só muda o domínio do aviso. Sem iframe na
  * carga, não há cookie. O embed também é o recurso mais pesado da página, e
  * em campanha paga isso é verba queimada antes de a página aparecer.
@@ -59,14 +59,13 @@ export default function VideoPoster({
     <button
       type="button"
       onClick={() => setTocando(true)}
-      /* O nome acessível precisa conter TODO o texto visível do botão — aqui
+      /* O nome acessível precisa conter TODO o texto visível do botão, aqui
          são duas partes, o chapéu ("Reproduzir") e o título ("Cláudia"). Com
          só uma delas, quem navega por voz não consegue acionar pelo que lê,
          e o Lighthouse reprova em `label-content-name-mismatch`. */
       /* `aria-labelledby` apontando para os próprios spans visíveis: o nome
          acessível passa a ser, por construção, o mesmo texto que se lê na
-         tela. Um `aria-label` escrito à mão com as mesmas palavras não basta
-         — o verificador compara com a leitura contígua dos nós visíveis. */
+         tela. Um `aria-label` escrito à mão com as mesmas palavras não basta, o verificador compara com a leitura contígua dos nós visíveis. */
       {...(chapeu || titulo
         ? { 'aria-labelledby': [chapeu ? idChapeu : '', titulo ? idTitulo : ''].filter(Boolean).join(' ') }
         : { 'aria-label': 'Reproduzir vídeo' })}

@@ -18,7 +18,7 @@ import { ROTAS } from '@/lib/rotas'
  *
  * ADAPTAÇÃO PARA O NEXT: o DS é uma SPA que troca telas por estado
  * (`onSelect`). Aqui cada tela é uma rota de verdade, então a navegação sai
- * em `<Link>` — o visitante pode abrir em nova aba, compartilhar o endereço
+ * em `<Link>`, o visitante pode abrir em nova aba, compartilhar o endereço
  * da página e o buscador indexa as quatro. A rota ativa vem do
  * `usePathname()` em vez de uma prop.
  *
@@ -46,12 +46,12 @@ export default function NavBar() {
   const cor = claro ? 'var(--ink-900)' : 'var(--sand-50)'
 
   /*
-   * HISTERESE — dois limiares, não um.
+   * HISTERESE, dois limiares, não um.
    *
    * Com um limiar único em 40px o cabeçalho entrava em laço: passar de 40
    * encolhia o header (padding 26→12, logo 72→48), o `ResizeObserver`
    * reescrevia `--nav-h`, o hero recalculava a própria margem negativa, a
-   * altura do documento mudava e a rolagem voltava para baixo de 40 — que
+   * altura do documento mudava e a rolagem voltava para baixo de 40, que
    * expandia o header de novo. O resultado era o cabeçalho quicando sem
    * parar em torno do ponto de corte.
    *
@@ -86,7 +86,7 @@ export default function NavBar() {
   }, [])
 
   /*
-   * Publica a altura do cabeçalho EXPANDIDO — e só ela.
+   * Publica a altura do cabeçalho EXPANDIDO, e só ela.
    *
    * O hero usa `--nav-h` na margem negativa e no padding do topo. Se o valor
    * acompanhasse o header condensando, a página inteira mudaria de altura a
@@ -173,7 +173,7 @@ export default function NavBar() {
             transition: 'padding var(--dur-base) var(--ease-crisp)',
           }}
         >
-          <Link href="/" aria-label={`${RESTAURANTE.name} — início`} style={{ display: 'flex' }}>
+          <Link href="/" aria-label={`${RESTAURANTE.name}, início`} style={{ display: 'flex' }}>
             <Image
               src={claro ? '/brand/logo-stacked-color.webp' : '/brand/logo-stacked-sand.webp'}
               alt={RESTAURANTE.name}

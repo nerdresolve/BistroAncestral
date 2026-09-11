@@ -11,14 +11,14 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
  *
  * O `Reveal` do DS parte do estado escondido e conta com um laço de medição
  * para abrir. O próprio comentário dele explica por que não usa
- * `IntersectionObserver` — em alguns contextos o observer nunca dispara e a
+ * `IntersectionObserver`, em alguns contextos o observer nunca dispara e a
  * página inteira some. Só que o laço de medição tem o mesmo ponto fraco por
  * outro caminho: se a medição não rodar, ou rodar antes de o layout assentar,
  * o bloco continua escondido. Foi o que aconteceu aqui: 44 de 48 blocos
  * ficaram em `opacity: 0` e metade da home não aparecia.
  *
  * Aqui o estado inicial é VISÍVEL. O bloco só é escondido depois que o
- * JavaScript confirma que está rodando e que consegue observar — e, mesmo
+ * JavaScript confirma que está rodando e que consegue observar, e, mesmo
  * assim, apenas se estiver fora da tela. Se qualquer coisa falhar, o
  * resultado é a página inteira legível, sem animação. O pior caso vira
  * "sem animação" em vez de "sem conteúdo".
@@ -32,7 +32,7 @@ type Variante = 'up' | 'fade' | 'left' | 'right' | 'scale' | 'curtain' | 'wipe'
 const ESCONDIDO: Record<Variante, CSSProperties> = {
   /* Sem `opacity`: esta é a variante do texto de corpo, e animar a
      transparência faz o verificador de contraste amostrar um quadro
-     intermediário — acusando 4,31:1 num texto que, assentado, dá 7,27:1.
+     intermediário, acusando 4,31:1 num texto que, assentado, dá 7,27:1.
      O deslocamento sozinho já entrega a entrada. */
   up: { transform: 'translateY(var(--reveal-rise))' },
   fade: { opacity: 0 },
@@ -74,7 +74,7 @@ export default function Reveal({
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (semMovimento) return
 
-    // Já visível na primeira pintura? Não anima — mexer no que o visitante
+    // Já visível na primeira pintura? Não anima, mexer no que o visitante
     // está lendo produz um tremor sem propósito.
     const r = el.getBoundingClientRect()
     const altura = window.innerHeight || document.documentElement.clientHeight || 0

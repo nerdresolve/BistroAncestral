@@ -5,7 +5,7 @@ import Icon from './Icon'
 
 /**
  * Uma pergunta do FAQ, portada do Ancestral Design System
- * (`components/content/FaqItem.jsx`). Só filetes — sem cartão, sem
+ * (`components/content/FaqItem.jsx`). Só filetes, sem cartão, sem
  * arredondamento.
  *
  * Acréscimo desta aplicação: `aria-controls` e `role="region"` ligando o

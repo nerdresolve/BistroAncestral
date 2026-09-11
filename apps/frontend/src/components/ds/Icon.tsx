@@ -5,7 +5,7 @@ import type { CSSProperties } from 'react'
  *
  * O DS padroniza no Lucide carregado por CDN, que troca um placeholder pelo
  * SVG em tempo de execução (`components/core/Icon.jsx`). Aqui os mesmos
- * desenhos entram como SVG embutido, mantendo os nomes do sistema — a API é
+ * desenhos entram como SVG embutido, mantendo os nomes do sistema, a API é
  * a mesma, `<Icon name="map-pin" />`.
  *
  * Motivo da troca: script de terceiro na home custa o `best-practices` do

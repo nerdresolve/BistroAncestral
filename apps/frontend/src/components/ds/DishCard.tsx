@@ -6,7 +6,7 @@ import type { CSSProperties } from 'react'
  * (`components/content/DishCard.jsx`).
  *
  * Fotografia sangrada, número em dendê, nome em serifa editorial e descrição
- * curta. Sem cartão arredondado, sem borda, sem sombra — nas palavras do
+ * curta. Sem cartão arredondado, sem borda, sem sombra, nas palavras do
  * próprio sistema, "a foto é o cartão".
  *
  * O número (01, 02, 03) só é usado porque a seção é de fato uma sequência de
@@ -41,7 +41,7 @@ export default function DishCard({
     <article className="group" style={style}>
       {/* `isolation: isolate`: sem isso o selo e a etiqueta dividem contexto
           de empilhamento com a foto (que escala no hover), e o verificador de
-          contraste amostra a cor COMPOSTA com a imagem — acusando 2,06:1 num
+          contraste amostra a cor COMPOSTA com a imagem, acusando 2,06:1 num
           selo que, contra o próprio dendê, dá 4,85:1. */}
       <div
         className="relative overflow-hidden"
