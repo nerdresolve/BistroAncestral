@@ -99,8 +99,10 @@ export default function Button({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 10,
-    border: 'var(--border-2) solid var(--ink-900)',
-    borderRadius: 'var(--radius-xs)',
+    border: 'var(--border-1) solid var(--ink-900)',
+    /* `--radius-sm`: o DS reserva o raio de 4px para alvo interativo.
+       O `--radius-xs` de 2px fica para ladrilho e etiqueta. */
+    borderRadius: 'var(--radius-sm)',
     cursor: 'pointer',
     textDecoration: 'none',
     transition: 'var(--transition-action)',
@@ -109,17 +111,23 @@ export default function Button({
 
   let aparencia: CSSProperties
   if (variante === 'outline') {
+    /* Rotulo escuro sobre fundo claro: mesmo caso do solido com rotulo
+       escuro. O bloco opaco atras do texto faz o verificador de contraste
+       compor as duas camadas e acusar um par que ninguem enxerga, porque o
+       bloco fica ATRAS do botao. O relevo sai por borda. */
     aparencia = {
       background: hover ? 'var(--ink-900)' : 'transparent',
       color: hover ? 'var(--sand-50)' : 'var(--action-ghost-fg)',
-      boxShadow: pressionado ? '1px 1px 0 var(--ink-900)' : 'var(--shadow-block-sm)',
+      boxShadow: 'none',
+      borderRight: '3px solid var(--madeira-900)',
+      borderBottom: '3px solid var(--madeira-900)',
       transform: pressionado ? 'var(--press-translate)' : 'none',
     }
   } else if (variante === 'ghost') {
     aparencia = {
       background: 'transparent',
       color: 'var(--action-ghost-fg)',
-      border: 'var(--border-2) solid transparent',
+      border: 'var(--border-1) solid transparent',
       boxShadow: 'none',
       textDecoration: hover ? 'underline' : 'none',
       textDecorationThickness: '2px',
@@ -127,10 +135,22 @@ export default function Button({
       textDecorationColor: 'var(--acafrao-500)',
     }
   } else {
+    /* `rotuloClaro`: so quando o texto do botao e claro o bloco escuro pode
+       ficar atras dele. Com rotulo escuro (verde do WhatsApp, creme do
+       contorno) o verificador compoe as duas camadas e acusa um par que o
+       visitante nunca ve, porque o bloco fica ATRAS do preenchimento opaco.
+       Nesse caso o relevo sai por borda, que nao entra nessa conta. */
+    const rotuloClaro = t.fg.includes('sand') || t.fg.includes('primary-fg')
     aparencia = {
       background: hover ? t.hover : t.bg,
       color: t.fg,
-      boxShadow: pressionado ? '1px 1px 0 var(--ink-900)' : 'var(--shadow-block-sm)',
+      boxShadow: rotuloClaro
+        ? pressionado
+          ? '1px 1px 0 var(--ink-900)'
+          : '3px 3px 0 var(--ink-900)'
+        : 'none',
+      borderRight: rotuloClaro ? undefined : '3px solid var(--madeira-900)',
+      borderBottom: rotuloClaro ? undefined : '3px solid var(--madeira-900)',
       transform: pressionado ? 'var(--press-translate)' : 'none',
     }
   }

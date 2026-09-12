@@ -12,7 +12,9 @@
   --dur-splash:2400ms; /* @kind other */
   --dur-marquee:34s; /* @kind other */
   --stagger-step:90ms; /* @kind other */
-  --reveal-rise:26px; /* @kind other */
+  /* 16px no lugar de 26px: deslocamento longo em bloco pequeno le como
+     empurrao, nao como entrada. */
+  --reveal-rise:16px; /* @kind other */
   --transition-action:background-color var(--dur-fast) var(--ease-crisp),color var(--dur-fast) var(--ease-crisp),transform var(--dur-fast) var(--ease-crisp),box-shadow var(--dur-fast) var(--ease-crisp); /* @kind other */
   --transition-media:transform var(--dur-slow) var(--ease-out),filter var(--dur-slow) var(--ease-out); /* @kind other */
   --transition-reveal:opacity var(--dur-reveal) var(--ease-out),transform var(--dur-reveal) var(--ease-out),clip-path var(--dur-reveal) var(--ease-curtain); /* @kind other */

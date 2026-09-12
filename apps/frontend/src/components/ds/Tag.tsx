@@ -35,7 +35,7 @@ export default function Tag({
         padding: '11px 18px',
         background: selecionado ? 'var(--ink-900)' : hover ? 'var(--sand-200)' : 'transparent',
         color: selecionado ? 'var(--sand-50)' : 'var(--ink-900)',
-        border: 'var(--border-1) solid var(--ink-900)',
+        border: 'var(--border-1) solid var(--ink-300)',
         borderRadius: 'var(--radius-xs)',
         cursor: 'pointer',
         transition: 'var(--transition-action)',

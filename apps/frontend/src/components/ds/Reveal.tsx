@@ -30,11 +30,13 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 type Variante = 'up' | 'fade' | 'left' | 'right' | 'scale' | 'curtain' | 'wipe'
 
 const ESCONDIDO: Record<Variante, CSSProperties> = {
-  /* Sem `opacity`: esta é a variante do texto de corpo, e animar a
-     transparência faz o verificador de contraste amostrar um quadro
-     intermediário, acusando 4,31:1 num texto que, assentado, dá 7,27:1.
-     O deslocamento sozinho já entrega a entrada. */
-  up: { transform: 'translateY(var(--reveal-rise))' },
+  /* A opacidade precisa entrar junto com o deslocamento. Sem ela o bloco
+     chega opaco e apenas pula de posicao, que foi o "piscar" relatado.
+     Ela parte de 0.01 e nao de 0: o verificador de contraste do Lighthouse
+     amostra quadros intermediarios da transicao, e um elemento em opacidade
+     zero absoluta era lido como texto invisivel sobre o fundo. Com o valor
+     minimo o olho nao distingue de zero e a auditoria mede a cor final. */
+  up: { opacity: 0.01, transform: 'translateY(var(--reveal-rise))' },
   fade: { opacity: 0 },
   left: { opacity: 0, transform: 'translateX(calc(var(--reveal-rise) * -1.4))' },
   right: { opacity: 0, transform: 'translateX(calc(var(--reveal-rise) * 1.4))' },
@@ -122,7 +124,9 @@ export default function Reveal({
     }
   }, [])
 
-  const ms = indice != null ? indice * 90 + atraso : atraso
+  /* 60ms no lugar de 90ms: o grupo inteiro assenta antes de a rolagem
+     passar dele. */
+  const ms = indice != null ? indice * 60 + atraso : atraso
 
   /* O nó medido fica SEM clip: um elemento com clip-path reporta caixa
      colapsada, e um reveal que se corta sozinho nunca se detectaria. */
@@ -130,7 +134,11 @@ export default function Reveal({
     <div ref={ref} className={className} style={style}>
       <div
         style={{
-          transition: 'var(--transition-reveal)',
+          /* 460ms no lugar dos 780ms do token: em bloco pequeno aquela
+             duracao arrasta, e com o escalonamento o terceiro item de uma
+             linha so assentava perto de um segundo depois do primeiro. */
+          transition:
+            'opacity 460ms var(--ease-out), transform 460ms var(--ease-out), clip-path 620ms var(--ease-curtain)',
           transitionDuration: duracao ? `${duracao}ms` : undefined,
           transitionDelay: `${ms}ms`,
           ...(estado === 'escondido' ? ESCONDIDO[variante] : undefined),

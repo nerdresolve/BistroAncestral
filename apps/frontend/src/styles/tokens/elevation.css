@@ -2,7 +2,11 @@
   /* No soft SaaS shadows. Depth comes from hard offset blocks (like a screenprint
      mis-registration) and from image-protection gradients. */
   --shadow-none:none;
-  --shadow-block-sm:4px 4px 0 var(--ink-900);
+  --shadow-block-sm:3px 3px 0 var(--ink-900);
+  /* Variante para acao sobre fundo claro: o bloco preto puro lia como um
+     segundo objeto colado na quina, em vez de profundidade. Na cor da
+     propria acao, escurecida, ele vira relevo. */
+  --shadow-block-acao:3px 3px 0 var(--madeira-700);
   --shadow-block:8px 8px 0 var(--ink-900);
   --shadow-block-dende:8px 8px 0 var(--dende-500);
   --shadow-block-acafrao:8px 8px 0 var(--acafrao-500);

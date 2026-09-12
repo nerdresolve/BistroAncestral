@@ -68,8 +68,8 @@ export default function FaqItem({
               justifyContent: 'center',
               background: aberto ? 'var(--dende-500)' : 'transparent',
               color: aberto ? 'var(--sand-50)' : 'var(--ink-900)',
-              border: 'var(--border-2) solid var(--ink-900)',
-              borderRadius: 'var(--radius-xs)',
+              border: 'var(--border-1) solid var(--ink-900)',
+              borderRadius: 'var(--radius-sm)',
               transition: 'var(--transition-action)',
             }}
           >
