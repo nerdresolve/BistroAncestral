@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="docs/brand/banner.svg" alt="Bistrô Ancestral: culinária afro-brasileira em Niterói" width="100%">
+<img src="docs/brand/banner.svg" alt="Bistrô Ancestral: Afro-Brazilian cooking in Niterói" width="100%">
 
-Site institucional de um restaurante de culinária afro-brasileira em Niterói.
-Migração de WordPress para Next.js, com um único objetivo de negócio: levar
-gente à mesa do salão.
+Institutional site for an Afro-Brazilian restaurant in Niterói. A migration
+from WordPress to Next.js, with a single business goal: get people to a table
+in the dining room.
 
-[![Licença](https://img.shields.io/badge/licen%C3%A7a-todos%20os%20direitos%20reservados-7c2929)](LICENSE) ![Stack](https://img.shields.io/badge/Next.js%2016-React%2019-121011) ![Tipo](https://img.shields.io/badge/TypeScript-Tailwind%204-a81c10) ![Lighthouse](https://img.shields.io/badge/a11y%20·%20SEO%20·%20boas%20pr%C3%A1ticas-100-63b52f)
+[![License](https://img.shields.io/badge/license-all%20rights%20reserved-7c2929)](LICENSE) ![Stack](https://img.shields.io/badge/Next.js%2016-React%2019-121011) ![Types](https://img.shields.io/badge/TypeScript-Tailwind%204-a81c10) ![Lighthouse](https://img.shields.io/badge/a11y%20·%20SEO%20·%20best%20practices-100-63b52f)
 
-**[Ver o site](https://bistroancestral.com.br)** · [As telas](#as-telas) · [O que resolve](#o-que-o-projeto-resolve) · [Frontend](#frontend) · [Licença](#licença)
+**[View the site](https://bistroancestral.com.br)** · [The screens](#the-screens) · [What it solves](#what-the-project-solves) · [Frontend](#frontend) · [License](#license)
 
 </div>
 
@@ -17,141 +17,143 @@ gente à mesa do salão.
 ```
 apps/
   frontend/   Next.js 16 (App Router) + TypeScript
-docs/telas/   capturas usadas neste README
+docs/telas/   screenshots used in this README
 ```
 
-## O que o projeto resolve
+## What the project solves
 
-O site anterior era WordPress com Elementor. Funcionava, mas cobrava caro por
-isso: o cardápio e os horários viviam dentro do construtor visual, o conteúdo
-saía de um tema que ninguém mais mantinha, e o carregamento carregava um
-carrossel de 40 KB para exibir três fotos paradas.
+The previous site was WordPress with Elementor. It worked, but it charged a
+high price for that: the menu and the opening hours lived inside the visual
+builder, the content came out of a theme nobody maintained any more, and every
+page load pulled a 40 KB carousel just to show three still photos.
 
-O problema de negócio era outro, e mais simples: o restaurante depende de gente
-entrando pela porta. Não há delivery, não há venda online. Cada visita começa
-num clique que abre o WhatsApp, no mapa ou no telefone.
+The business problem was a different one, and simpler: the restaurant depends
+on people walking through the door. There is no delivery, no online ordering.
+Every visit starts with a tap that opens WhatsApp, the map, or the phone.
 
-Este projeto reconstrói o site em torno disso. O conteúdo saiu do banco do
-WordPress e virou dado tipado em `src/lib/`; a apresentação segue o sistema de
-design da marca; e os caminhos que levam ao salão, WhatsApp, mapa, telefone,
-cardápio, são medidos como conversão.
+This project rebuilds the site around that. The content left the WordPress
+database and became typed data in `src/lib/`; the presentation follows the
+brand's design system; and the paths that lead to the dining room, WhatsApp,
+map, phone, menu, are measured as conversions.
 
-## As telas
+## The screens
 
 <div align="center">
-<img src="docs/telas/01-home-card.webp" alt="Home do Bistrô Ancestral" width="88%">
+<img src="docs/telas/01-home-card.webp" alt="Bistrô Ancestral home page" width="88%">
 </div>
 
 <table>
 <tr>
-<td width="50%"><a href="docs/telas/01-home.webp" title="ver a página inteira"><img src="docs/telas/01-home-card.webp" alt="Home"></a><br><sub><b>Home</b> · hero fotográfico, cardápio, história e como chegar</sub></td>
-<td width="50%"><a href="docs/telas/02-cardapio.webp" title="ver a página inteira"><img src="docs/telas/02-cardapio-card.webp" alt="Cardápio"></a><br><sub><b>Cardápio</b> · os mais pedidos, numerados, com a foto sangrada</sub></td>
+<td width="50%"><a href="docs/telas/01-home.webp" title="view the full page"><img src="docs/telas/01-home-card.webp" alt="Home"></a><br><sub><b>Home</b> · photographic hero, menu, story and directions</sub></td>
+<td width="50%"><a href="docs/telas/02-cardapio.webp" title="view the full page"><img src="docs/telas/02-cardapio-card.webp" alt="Menu"></a><br><sub><b>Menu</b> (<code>/cardapio</code>) · the most ordered dishes, numbered, with a full-bleed photo</sub></td>
 </tr>
 <tr>
-<td width="50%"><a href="docs/telas/03-historia.webp" title="ver a página inteira"><img src="docs/telas/03-historia-card.webp" alt="Nossa história"></a><br><sub><b>Nossa história</b> · depoimentos em vídeo de quem cozinha</sub></td>
-<td width="50%"><a href="docs/telas/04-como-chegar.webp" title="ver a página inteira"><img src="docs/telas/04-como-chegar-card.webp" alt="Como chegar"></a><br><sub><b>Como chegar</b> · endereço, horário e reserva pelo WhatsApp</sub></td>
+<td width="50%"><a href="docs/telas/03-historia.webp" title="view the full page"><img src="docs/telas/03-historia-card.webp" alt="Our story"></a><br><sub><b>Our story</b> · video testimonials from the people who cook</sub></td>
+<td width="50%"><a href="docs/telas/04-como-chegar.webp" title="view the full page"><img src="docs/telas/04-como-chegar-card.webp" alt="Directions"></a><br><sub><b>Directions</b> · address, hours and booking over WhatsApp</sub></td>
 </tr>
 <tr>
-<td width="50%"><a href="docs/telas/05-links.webp" title="ver a página inteira"><img src="docs/telas/05-links-card.webp" alt="BistroLinks"></a><br><sub><b>BistroLinks</b> · a página da bio do Instagram, sem navegação</sub></td>
-<td width="50%"><a href="docs/telas/06-politica.webp" title="ver a página inteira"><img src="docs/telas/06-politica-card.webp" alt="Política de privacidade"></a><br><sub><b>Privacidade</b> · a política de LGPD transcrita do site anterior</sub></td>
+<td width="50%"><a href="docs/telas/05-links.webp" title="view the full page"><img src="docs/telas/05-links-card.webp" alt="BistroLinks"></a><br><sub><b>BistroLinks</b> · the Instagram bio page, with no navigation</sub></td>
+<td width="50%"><a href="docs/telas/06-politica.webp" title="view the full page"><img src="docs/telas/06-politica-card.webp" alt="Privacy policy"></a><br><sub><b>Privacy</b> · the LGPD policy transcribed from the previous site</sub></td>
 </tr>
 </table>
 
-### No celular
+### On the phone
 
-O mesmo conteúdo em uma coluna. O primeiro botão de WhatsApp aparece dentro da
-primeira rolagem.
+The same content in a single column. The first WhatsApp button appears within
+the first scroll.
 
 <div align="center">
-<a href="docs/telas/07-mobile-card.webp" title="ver a página inteira"><img src="docs/telas/07-mobile-card.webp" alt="Home no telefone" width="320"></a>
+<a href="docs/telas/07-mobile-card.webp" title="view the full page"><img src="docs/telas/07-mobile-card.webp" alt="Home on a phone" width="320"></a>
 </div>
 
 ---
 
 ## Frontend
 
-Next.js com App Router. As seis rotas são geradas no build, não há banco nem
-API: o conteúdo é dado tipado, e mudar um prato é editar um arquivo.
+Next.js with the App Router. The six routes are generated at build time; there
+is no database and no API: the content is typed data, and changing a dish means
+editing a file.
 
-Decisões que sustentam o objetivo:
+Decisions that hold the goal up:
 
-* **Server Components por padrão.** Só vão para o cliente os componentes que
-  precisam de estado: navegação, accordion, contador, player e os avisos.
-* **`next/font`** auto-hospeda Anton, Archivo e Instrument Serif no build, sem requisição a terceiro e sem salto de layout na troca de fonte.
-* **Player de vídeo sob demanda.** O embed do YouTube só é montado no clique.
-  Carregado junto com a página, ele registra cookie de terceiro e é o recurso
-  mais pesado do site.
-* **Ícones SVG desenhados no projeto**, em vez de biblioteca por CDN.
-* **Consentimento de verdade.** O GTM só carrega depois do aceite de cookies, no site anterior ele subia antes de qualquer clique.
-* `sitemap.xml`, `robots.txt`, canonical, Open Graph e JSON-LD `Restaurant`
-  com coordenadas, horário e cardápio.
+* **Server Components by default.** Only the components that need state ship to
+  the client: navigation, accordion, counter, player and the notices.
+* **`next/font`** self-hosts Anton, Archivo and Instrument Serif at build time, with no third-party request and no layout shift when the font swaps.
+* **Video player on demand.** The YouTube embed is only mounted on click.
+  Loaded along with the page, it sets a third-party cookie and is the heaviest
+  resource on the site.
+* **SVG icons drawn in the project**, instead of a library over a CDN.
+* **Consent that actually means something.** GTM only loads after cookies are accepted; on the previous site it came up before any click.
+* `sitemap.xml`, `robots.txt`, canonical, Open Graph and `Restaurant` JSON-LD
+  with coordinates, opening hours and menu.
 
 ```bash
 cd apps/frontend
 npm install
-cp .env.example .env.local     # ajuste NEXT_PUBLIC_SITE_URL e o ID do GTM
+cp .env.example .env.local     # set NEXT_PUBLIC_SITE_URL and the GTM ID
 npm run dev                    # http://localhost:3000
-npm run build && npm start     # produção
-npm run lighthouse             # audita as seis rotas, mobile e desktop
+npm run build && npm start     # production
+npm run lighthouse             # audits the six routes, mobile and desktop
 ```
 
-### Onde mexer
+### Where to make changes
 
-| O que | Arquivo |
+| What | File |
 | --- | --- |
-| Endereço, horário, telefone, links externos | `src/lib/restaurante.ts` |
-| Cardápio, serviços, FAQ, textos das seções | `src/lib/conteudo.ts` |
-| Rotas da navegação | `src/lib/rotas.ts` |
-| Cores, tipografia, espaçamento, motion | `src/styles/tokens/` |
-| Componentes do sistema de design | `src/components/ds/` |
-| Montagem de cada tela | `src/views/` |
+| Address, hours, phone, external links | `src/lib/restaurante.ts` |
+| Menu, services, FAQ, section copy | `src/lib/conteudo.ts` |
+| Navigation routes | `src/lib/rotas.ts` |
+| Colors, typography, spacing, motion | `src/styles/tokens/` |
+| Design system components | `src/components/ds/` |
+| Assembly of each screen | `src/views/` |
 
-O conteúdo editorial fica separado dos dados duros de propósito: a cozinha
-revisa `conteudo.ts` com frequência, enquanto endereço e horário quase não
-mudam e alimentam também o JSON-LD.
+Editorial content is kept apart from the hard data on purpose: the kitchen
+revises `conteudo.ts` often, while address and hours barely change and also
+feed the JSON-LD.
 
-### Medição
+### Measurement
 
-Os cliques que levam ao salão disparam eventos no `dataLayer`:
+The clicks that lead to the dining room fire events on the `dataLayer`:
 
-| Evento | Onde |
+| Event | Where |
 | --- | --- |
-| `clique_whatsapp` | CTAs de reserva e contato |
-| `clique_telefone` | telefone do cabeçalho e do rodapé |
-| `clique_mapa` | "Ver endereço no mapa" |
-| `clique_cardapio` | cardápio completo |
+| `clique_whatsapp` | booking and contact CTAs |
+| `clique_telefone` | phone number in the header and footer |
+| `clique_mapa` | "Ver endereço no mapa" (view address on the map) |
+| `clique_cardapio` | full menu |
 
-Quem recusa cookies não é medido, a contagem fica abaixo do número real de
-cliques. É o custo de o consentimento valer de fato.
+Anyone who declines cookies is not measured, so the count sits below the real
+number of clicks. That is the cost of consent meaning something.
 
 ---
 
-## Acessibilidade e performance
+## Accessibility and performance
 
-As seis rotas fecham **100 em acessibilidade, boas práticas e SEO**, no perfil
-móvel e no desktop. Desempenho fica entre 95 e 100.
+The six routes hit **100 on accessibility, best practices and SEO**, on both
+the mobile and the desktop profile. Performance lands between 95 and 100.
 
-Algumas decisões vieram de medição, não de gosto:
+Some decisions came out of measurement, not taste:
 
-* O laranja da marca com texto branco dá 2,14:1. O tom da ação foi escurecido
-  até passar o mínimo da WCAG, mantendo o vivo onde o fundo é escuro.
-* As animações de entrada nunca escondem conteúdo: o bloco nasce na posição
-  final e só desliza quando entra em tela. Se o JavaScript falhar, a página
-  continua legível.
-* `prefers-reduced-motion` desliga todo o movimento, inclusive o marquee.
+* The brand orange with white text gives 2.14:1. The action tone was darkened
+  until it cleared the WCAG minimum, keeping the vivid shade where the
+  background is dark.
+* Entrance animations never hide content: the block starts at its final
+  position and only slides when it comes into view. If JavaScript fails, the
+  page stays readable.
+* `prefers-reduced-motion` turns off all movement, marquee included.
 
 ---
 
-## Licença
+## License
 
-© 2026 NerdResolve. Todos os direitos reservados.
+© 2026 NerdResolve. All rights reserved.
 
-O repositório é público para avaliação técnica e demonstração de portfólio. O
-código pode ser lido e estudado; não há licença de uso, cópia ou
-redistribuição. Ver [LICENSE](LICENSE).
+The repository is public for technical review and portfolio purposes. The code
+may be read and studied; no license to use, copy or redistribute is granted.
+See [LICENSE](LICENSE).
 
-A marca, as fotografias, os textos e o sistema de design do Bistrô Ancestral
-pertencem ao titular e não são licenciados por este repositório.
+The Bistrô Ancestral brand, photography, copy and design system belong to their
+owner and are not licensed by this repository.
 
 <div align="center">
 <img src="apps/frontend/public/brand/logo.webp" width="64" alt="">
