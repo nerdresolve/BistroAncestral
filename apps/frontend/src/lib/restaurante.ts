@@ -95,7 +95,25 @@ export const RESTAURANTE = {
    * Âncora da seção da oferta. TODOS os botões "Venha viver essa experiência"
    * do site apontam para cá, e não para o WhatsApp, como parecia.
    */
-  /** Id do vídeo do YouTube usado pela fachada em "Como chegar". */
+  /**
+   * Os quatro vídeos do canal, com o id que cada um tem de fato.
+   *
+   * Uma versão anterior usava `eGxuIUODxAk` nos quatro lugares, variando só a
+   * capa: quem clicava em "Max" ou "Cláudia" caía sempre no mesmo Short.
+   * Os títulos vieram do próprio YouTube, para o mapa não depender de chute.
+   */
+  videos: {
+    /** "Caminho do Ancestral": o trajeto até a casa. */
+    comoChegar: 'eGxuIUODxAk',
+    /** "História do Ancestral": a casa por dentro. */
+    casa: 'RmR80BNdztU',
+    /** "História do Max". */
+    max: 'J9c6x-kjcPI',
+    /** "Infância da Cláudia". */
+    claudia: 'zQPDpAQfrbo',
+  },
+
+  /** @deprecated Use `videos.comoChegar`. Mantido para não quebrar import. */
   videoId: 'eGxuIUODxAk',
 
   ancoraOferta: '#oferta',

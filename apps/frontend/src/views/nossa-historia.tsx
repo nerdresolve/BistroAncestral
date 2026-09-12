@@ -156,14 +156,22 @@ export default function NossaHistoriaView() {
 
           <div className="ds-grid-3">
             {[
-              { poster: '/fotos/historia-claudia-v.webp', titulo: 'Cláudia' },
-              { poster: '/fotos/historia-max-v.webp', titulo: 'Max' },
-              { poster: '/fotos/historia-infancia-v.webp', titulo: 'A casa por dentro' },
+              {
+                poster: '/fotos/historia-claudia-v.webp',
+                titulo: 'Cláudia',
+                id: RESTAURANTE.videos.claudia,
+              },
+              { poster: '/fotos/historia-max-v.webp', titulo: 'Max', id: RESTAURANTE.videos.max },
+              {
+                poster: '/fotos/historia-infancia-v.webp',
+                titulo: 'A casa por dentro',
+                id: RESTAURANTE.videos.casa,
+              },
             ].map((v, i) => (
               <Reveal key={v.titulo} variante="up" indice={i}>
                 <VideoPoster
                   poster={v.poster}
-                  videoId={RESTAURANTE.videoId}
+                  videoId={v.id}
                   proporcao="9 / 16"
                   chapeu="Reproduzir"
                   titulo={v.titulo}

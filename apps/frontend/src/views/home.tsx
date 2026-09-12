@@ -227,19 +227,19 @@ export default function HomeView() {
               bloco="acafrao"
             />
             <div className="ds-hide-phone" style={{ position: 'absolute', right: -28, bottom: -44, width: 220 }}>
-              {/* Recorte quadrado de alta resolução: o arquivo anterior era
-                  quadro de vídeo em 16:9, e a moldura circular ampliava o
-                  meio da imagem já comprimida. */}
+              {/* Fotografia de prato, e nao um recorte da imagem ao lado.
+                  A versao anterior repetia a mesma foto da Claudia dentro do
+                  circulo, ao lado dela propria, o que nao dizia nada. O
+                  Caipora e foto dedicada da comida, que e o assunto da secao.
+
+                  `sizes="440px"`: a moldura tem 220px e em tela retina pede o
+                  dobro em pixels reais. */}
               <ImageFrame
-                src="/fotos/inset-casa.webp"
-                alt="Cláudia no salão do Bistrô Ancestral"
+                src="/fotos/prato-caipora.webp"
+                alt="Caipora: barriga de porco com risoto"
                 proporcao="1 / 1"
                 corte="organic"
                 zoom={false}
-                /* A moldura tem 220px, mas em tela retina isso pede ~440px
-                   reais. Com `sizes="220px"` o otimizador entregava 178px de
-                   largura natural, a foto trocada continuava borrada, agora
-                   por resolução insuficiente e não por ser quadro de vídeo. */
                 sizes="440px"
               />
             </div>
@@ -437,7 +437,7 @@ export default function HomeView() {
             <Reveal variante="wipe" atraso={180}>
               <VideoPoster
                 poster="/fotos/video-capa.jpg"
-                videoId={RESTAURANTE.videoId}
+                videoId={RESTAURANTE.videos.casa}
                 chapeu="Reproduzir"
                 titulo="A casa por dentro"
                 proporcao="16 / 9"
@@ -449,7 +449,7 @@ export default function HomeView() {
             <Reveal variante="up" indice={1}>
               <VideoPoster
                 poster="/fotos/historia-claudia-v.webp"
-                videoId={RESTAURANTE.videoId}
+                videoId={RESTAURANTE.videos.claudia}
                 proporcao="9 / 16"
                 chapeu="Reproduzir"
                 titulo="Cláudia"
@@ -459,7 +459,7 @@ export default function HomeView() {
             <Reveal variante="up" indice={2}>
               <VideoPoster
                 poster="/fotos/historia-max-v.webp"
-                videoId={RESTAURANTE.videoId}
+                videoId={RESTAURANTE.videos.max}
                 proporcao="9 / 16"
                 chapeu="Reproduzir"
                 titulo="Max"
