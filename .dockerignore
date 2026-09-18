@@ -1,0 +1,22 @@
+# O contexto do build é a raiz do repositório: tudo que não entra na imagem
+# fica de fora daqui para o envio ao daemon não carregar peso morto.
+**/node_modules
+**/.next
+**/.git
+**/.env
+**/.env.*
+!**/.env.example
+
+# Material de origem da migração: pesa mais que a aplicação inteira e não
+# participa do build.
+Ancestral Design System/
+design/
+docs/
+infra/
+
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+**/screenshots
+**/playwright-report
+**/test-results

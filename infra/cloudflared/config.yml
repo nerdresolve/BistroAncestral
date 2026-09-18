@@ -1,0 +1,21 @@
+# Túnel do bistro.nerdresolve.com.
+#
+# Túnel próprio, e não uma regra a mais no túnel `nerdresolve`: aquele serve
+# os domínios principais da casa, e uma edição errada ali tira todos do ar de
+# uma vez. Separado, o pior caso é este site cair sozinho.
+#
+# ATENÇÃO ao rodar cloudflared na mão: sem `--config` apontando para este
+# arquivo, o binário lê ~/.cloudflared/config.yml, que fixa um túnel antigo já
+# removido da conta. Os comandos deste projeto sempre passam --config.
+
+# O id do tunel chega pela linha de comando (CLOUDFLARE_TUNNEL_ID, em
+# infra/.env), entao este arquivo nao fixa nada da conta e pode ser
+# publicado junto do codigo.
+credentials-file: /etc/cloudflared/creds.json
+
+# O destino é o serviço `web` na rede interna do compose: o site nunca é
+# alcançado de fora a não ser pelo túnel.
+ingress:
+  - hostname: bistro.nerdresolve.com
+    service: http://web:3000
+  - service: http_status:404

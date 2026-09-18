@@ -1,0 +1,70 @@
+# Bistrô Ancestral em produção.
+#
+# O site é estático em quase toda a sua extensão e não tem banco: um serviço
+# só. A borda é o cloudflared que já roda nesta máquina servindo os demais
+# domínios nerdresolve; este compose publica a aplicação numa porta local e o
+# túnel aponta bistro.nerdresolve.com para ela.
+#
+#   docker compose -f infra/docker-compose.yml up -d --build
+#
+# `restart: unless-stopped` é o que devolve o site ao ar sozinho quando a
+# máquina reinicia: o serviço do Docker sobe no boot e recria o container,
+# a menos que alguém o tenha parado de propósito.
+
+# O nome do projeto e fixado: sem ele o compose o deriva do diretorio (`infra`),
+# que colide com o do coral nesta mesma maquina, e um `down` daqui derrubaria
+# os containers de la.
+name: bistro
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: apps/frontend/Dockerfile
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://bistro.nerdresolve.com}
+        NEXT_PUBLIC_GTM_ID: ${NEXT_PUBLIC_GTM_ID:-}
+    image: bistro-web:latest
+    container_name: bistro-web
+    restart: unless-stopped
+    # Sem porta publicada: quem chega de fora passa obrigatoriamente pelo
+    # túnel. A porta 3010 fica exposta só em 127.0.0.1 para conferência
+    # local (curl, Lighthouse) sem abrir nada na rede.
+    ports:
+      - "127.0.0.1:3010:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://bistro.nerdresolve.com}
+      NEXT_PUBLIC_GTM_ID: ${NEXT_PUBLIC_GTM_ID:-}
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Borda pública. Sai buscando o site pelo nome do serviço na rede interna,
+  # então o container do site não precisa de porta aberta para o mundo.
+  tunnel:
+    image: cloudflare/cloudflared:2026.8.2
+    container_name: bistro-tunnel
+    restart: unless-stopped
+    command: tunnel --config /etc/cloudflared/config.yml --no-autoupdate run ${CLOUDFLARE_TUNNEL_ID}
+    volumes:
+      - ./cloudflared/config.yml:/etc/cloudflared/config.yml:ro
+      # As credenciais do túnel são segredo: ficam fora do repositório, no
+      # perfil do usuário, e entram somente-leitura.
+      - ${USERPROFILE}/.cloudflared/${CLOUDFLARE_TUNNEL_ID}.json:/etc/cloudflared/creds.json:ro
+    depends_on:
+      web:
+        condition: service_healthy
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
