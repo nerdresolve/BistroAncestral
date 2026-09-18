@@ -86,7 +86,9 @@ export default function NossaHistoriaView() {
               {TEXTOS.heroTitulo}
             </p>
           </Reveal>
-          {/* Texto institucional do site em produção. */}
+          {/* Texto proprio desta pagina. Antes aqui vinham `apresentacao` e
+              `comodidadeTexto`, os mesmos dois paragrafos da home: quem
+              clicava em "Nossa historia" relia o que acabara de ler. */}
           <p
             style={{
               color: 'var(--text-secondary)',
@@ -94,7 +96,7 @@ export default function NossaHistoriaView() {
               fontSize: 'var(--text-lg)',
             }}
           >
-            {TEXTOS.apresentacao}
+            {TEXTOS.historiaAberturaTexto}
           </p>
           <p
             style={{
@@ -103,7 +105,7 @@ export default function NossaHistoriaView() {
               fontSize: 'var(--text-lg)',
             }}
           >
-            {TEXTOS.comodidadeTexto}
+            {TEXTOS.historiaRaizesTexto}
           </p>
           <QuoteBlock style={{ marginTop: 36 }}>
             Cada um de nossos pratos traz consigo uma história.
@@ -138,6 +140,49 @@ export default function NossaHistoriaView() {
         </div>
       </section>
 
+      {/* ===== A CASA =====
+          Entra entre as fotos e os vídeos para a página ter um meio: antes
+          ela saltava da abertura direto para os depoimentos. É também onde
+          o texto situa o endereço, que é o objetivo do site. */}
+      <section style={{ background: 'var(--surface-sand-deep)', padding: 'var(--section-y) 0' }}>
+        <div className="ds-shell ds-split" style={{ ['--split' as string]: '1fr 1fr' }}>
+          <Reveal variante="up">
+            <SectionLabel tom="folha">{TEXTOS.historiaCasaSobretitulo}</SectionLabel>
+            <h2 style={{ fontSize: 'var(--display-md)', margin: '18px 0 16px', maxWidth: '16ch' }}>
+              {TEXTOS.historiaCasaTitulo}
+            </h2>
+            <p
+              style={{
+                color: 'var(--text-secondary)',
+                lineHeight: 'var(--text-leading-loose)',
+                maxWidth: '48ch',
+                margin: '0 0 28px',
+              }}
+            >
+              {TEXTOS.historiaCasaTexto}
+            </p>
+            <Button
+              href={RESTAURANTE.external.maps}
+              externo
+              tom="primary"
+              icone="navigation"
+              posicaoIcone="left"
+              conversao="clique_mapa"
+            >
+              Ver endereço no mapa
+            </Button>
+          </Reveal>
+          <Reveal variante="up" atraso={150}>
+            <ImageFrame
+              src="/fotos/servico-local.webp"
+              alt="Varanda do Bistrô Ancestral, no Engenho do Mato"
+              proporcao="4 / 3"
+              bloco="acafrao"
+            />
+          </Reveal>
+        </div>
+      </section>
+
       {/* ===== DEPOIMENTOS EM VÍDEO ===== */}
       <section style={{ background: 'var(--surface-madeira)', padding: 'var(--section-y) 0' }}>
         <div className="ds-shell">
@@ -147,11 +192,24 @@ export default function NossaHistoriaView() {
             </SectionLabel>
           </Reveal>
           <Reveal variante="curtain" atraso={90}>
-            <h2 style={{ color: 'var(--sand-50)', margin: '20px 0 var(--space-8)' }}>
+            <h2 style={{ color: 'var(--sand-50)', margin: '20px 0 20px' }}>
               Nas palavras
               <br />
               de quem cozinha
             </h2>
+          </Reveal>
+          <Reveal variante="up" atraso={140}>
+            <p
+              style={{
+                color: 'var(--sand-50)',
+                opacity: 0.82,
+                maxWidth: '54ch',
+                lineHeight: 'var(--text-leading-loose)',
+                margin: '0 0 var(--space-8)',
+              }}
+            >
+              {TEXTOS.historiaVideosTexto}
+            </p>
           </Reveal>
 
           <div className="ds-grid-3">

@@ -105,6 +105,20 @@ export const TEXTOS = {
   // ORIGINAL: "que você encontra no aqui no Bistrô Ancestral"
   cardapioTitulo: 'As principais atrações que você encontra aqui no Bistrô Ancestral',
 
+  /*
+   * Subtitulo do cardapio. O original repetia o proprio titulo da secao
+   * ("As principais atracoes que voce encontra aqui"), entao a pagina
+   * abria dizendo duas vezes a mesma coisa. Aqui o paragrafo explica o
+   * que os tres pratos sao: os mais pedidos, nao o cardapio inteiro.
+   */
+  cardapioSubtitulo:
+    'Três pratos que resumem a casa. O cardápio completo tem muito mais, e a equipe apresenta as opções na mesa, prato a prato.',
+
+  /* Nota ao pe da lista: a casa tem opcoes vegetarianas (o FAQ do site
+     original ja afirmava isso) e e a equipe que orienta a escolha. */
+  cardapioNota:
+    'Boa parte do cardápio tem versão vegetariana. Se tiver restrição alimentar, é só dizer ao garçom: a cozinha ajusta o que for possível.',
+
   comodidadeSobretitulo: 'Comodidade',
   comodidadeTitulo: 'Um restaurante de tradição',
   // ORIGINAL: "Cada um de nossos pratos trás consigo uma história"
@@ -128,6 +142,34 @@ export const TEXTOS = {
   historiaSobretitulo: 'Nossa História',
   // ORIGINAL: "Conheça um pouco mais sobrenossa missão."
   historiaTitulo: 'Conheça um pouco mais sobre nossa missão.',
+
+  /*
+   * Texto proprio da pagina Nossa Historia.
+   *
+   * O site em WordPress era de pagina unica: nao existe original destes
+   * paragrafos para copiar. Antes a pagina repetia `apresentacao` e
+   * `comodidadeTexto`, os mesmos dois blocos ja exibidos na home, entao
+   * quem clicava em "Nossa historia" lia de novo o que acabara de ler.
+   *
+   * O que esta aqui nao inventa fato nenhum: reorganiza o que o proprio
+   * site afirma (comida de mae e de vo, a Regiao Oceanica de Niteroi, cada
+   * prato com uma historia, atendimento sem cardapio digital, dois anos de
+   * casa com avaliacao maxima no Google) em texto que so faz sentido nesta
+   * pagina, deixando a home com a funcao de apresentar e esta com a de
+   * contar.
+   */
+  historiaAberturaTexto:
+    'O Bistrô Ancestral nasceu de uma ideia simples: servir a comida que se come em casa. A de mãe, a de vó, aquela que ninguém pede pelo nome porque já sabe o cheiro. O que a casa faz é levar essa comida a sério, com técnica e tempo, sem tirar dela o que ela tem de melhor, que é o cuidado.',
+  historiaRaizesTexto:
+    'A cozinha parte das raízes brasileiras e acolhe o que chegou aqui pelos oceanos, porque foi assim que a nossa mesa se formou. Cada prato guarda uma origem, e é por isso que eles têm nome: o Camarú, o Caipora, o Terra e Mar. Nenhum deles entrou no cardápio por acaso.',
+
+  historiaCasaSobretitulo: 'A casa',
+  historiaCasaTitulo: 'Uma mesa na Região Oceânica',
+  historiaCasaTexto:
+    'Estamos no Engenho do Mato, em Niterói, entre áreas verdes preservadas e algumas das praias mais bonitas do estado. O salão foi pensado para receber do jeito antigo: sem cardápio digital, sem pressa, com alguém da equipe para explicar cada prato e ajudar na escolha. Em dois anos de casa, isso rendeu avaliação máxima na nossa página do Google.',
+
+  historiaVideosTexto:
+    'Quem cozinha conta melhor do que qualquer texto. Nos vídeos abaixo, a Cláudia e o Max falam da origem da casa e do que serve cada prato.',
 
   faqSobretitulo: 'FICOU COM ALGUMA DÚVIDA?',
   // ORIGINAL: "Confira as dúvidasmais frequentes"

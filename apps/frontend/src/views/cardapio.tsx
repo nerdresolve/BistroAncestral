@@ -7,7 +7,7 @@ import Marquee from '@/components/ds/Marquee'
 import Reveal from '@/components/ds/Reveal'
 import Tag from '@/components/ds/Tag'
 import { SectionLabel } from '@/components/ds/primitivos'
-import { DESTAQUES } from '@/lib/conteudo'
+import { DESTAQUES, TEXTOS } from '@/lib/conteudo'
 import { RESTAURANTE } from '@/lib/restaurante'
 
 /**
@@ -66,7 +66,7 @@ export default function CardapioView() {
                 marginTop: 24,
               }}
             >
-              As principais atrações que você encontra aqui no Bistrô Ancestral.
+              {TEXTOS.cardapioSubtitulo}
             </p>
           </Reveal>
         </div>
@@ -187,6 +187,21 @@ export default function CardapioView() {
                   {RESTAURANTE.phone}
                 </Button>
               </div>
+
+              {/* Responde na pagina a duvida que o FAQ ja levantava: quem
+                  tem restricao alimentar precisa saber disso antes de
+                  decidir vir, nao depois de sentar. */}
+              <p
+                style={{
+                  color: 'var(--text-secondary)',
+                  fontSize: 'var(--text-sm)',
+                  lineHeight: 'var(--text-leading-loose)',
+                  maxWidth: '52ch',
+                  margin: '24px 0 0',
+                }}
+              >
+                {TEXTOS.cardapioNota}
+              </p>
             </div>
           </Reveal>
         </div>
