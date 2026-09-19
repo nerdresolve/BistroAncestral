@@ -76,6 +76,10 @@ export default function VideoPoster({
         position: 'relative',
         width: '100%',
         aspectRatio: proporcao,
+        /* Mesmo canto dos demais alvos interativos: o cartao de video e
+           clicavel e ficava em angulo reto ao lado de botoes arredondados.
+           O `overflow: hidden` ja existente faz a foto acompanhar o raio. */
+        borderRadius: 'var(--radius-acao)',
         overflow: 'hidden',
         cursor: 'pointer',
         background: 'var(--madeira-900)',

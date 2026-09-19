@@ -18,9 +18,13 @@ import type { CSSProperties } from 'react'
 type Corte = 'square' | 'portrait' | 'arch' | 'organic'
 type Bloco = 'none' | 'dende' | 'acafrao' | 'folha' | 'ink'
 
+/* `square` e `portrait` passam a acompanhar o canto dos demais blocos
+   (cartao de video, botao). Eram angulo reto e, ao lado dos videos ja
+   arredondados, as duas familias de "post" nao pareciam do mesmo conjunto.
+   `arch` e `organic` sao recortes autorais do DS e ficam como estao. */
 const CORTES: Record<Corte, string> = {
-  square: '0',
-  portrait: '0',
+  square: 'var(--radius-acao)',
+  portrait: 'var(--radius-acao)',
   arch: 'var(--radius-arch)',
   organic: 'var(--radius-organic)',
 }

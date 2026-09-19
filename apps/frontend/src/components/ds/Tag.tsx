@@ -36,7 +36,10 @@ export default function Tag({
         background: selecionado ? 'var(--ink-900)' : hover ? 'var(--sand-200)' : 'transparent',
         color: selecionado ? 'var(--sand-50)' : 'var(--ink-900)',
         border: 'var(--border-1) solid var(--ink-300)',
-        borderRadius: 'var(--radius-xs)',
+        /* Alvo interativo (filtro do cardapio), nao ladrilho: acompanha o
+           canto dos botoes. As etiquetas estaticas do cartao de prato sao
+           outro componente e seguem com o raio de ladrilho. */
+        borderRadius: 'var(--radius-acao)',
         cursor: 'pointer',
         transition: 'var(--transition-action)',
         ...style,

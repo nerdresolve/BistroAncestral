@@ -203,7 +203,7 @@ export default function NavBar() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 border: `var(--border-1) solid ${cor}`,
-                borderRadius: 'var(--radius-sm)',
+                borderRadius: 'var(--radius-acao)',
                 color: cor,
               }}
             >
@@ -296,7 +296,7 @@ export default function NavBar() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 border: 'var(--border-1) solid var(--sand-50)',
-                borderRadius: 'var(--radius-sm)',
+                borderRadius: 'var(--radius-acao)',
               }}
             >
               <svg viewBox="0 0 24 24" width={22} height={22} stroke="currentColor" strokeWidth={2} fill="none">
@@ -393,7 +393,7 @@ export function WhatsAppFlutuante() {
         background: 'var(--folha-500)',
         color: 'var(--ink-900)',
         border: 'var(--border-1) solid var(--ink-900)',
-        borderRadius: 'var(--radius-sm)',
+        borderRadius: 'var(--radius-acao)',
         boxShadow: 'var(--shadow-block-sm)',
         textDecoration: 'none',
         opacity: visivel ? 1 : 0,

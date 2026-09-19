@@ -62,7 +62,7 @@ export default function BannerCookies() {
               background: 'var(--action-primary-bg)',
               color: 'var(--action-primary-fg)',
               border: 'var(--border-1) solid var(--ink-900)',
-              borderRadius: 'var(--radius-sm)',
+              borderRadius: 'var(--radius-acao)',
               boxShadow: 'var(--shadow-block-sm)',
               letterSpacing: '0.14em',
             }}

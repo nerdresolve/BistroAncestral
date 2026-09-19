@@ -100,9 +100,10 @@ export default function Button({
     justifyContent: 'center',
     gap: 10,
     border: 'var(--border-1) solid var(--ink-900)',
-    /* `--radius-sm`: o DS reserva o raio de 4px para alvo interativo.
-       O `--radius-xs` de 2px fica para ladrilho e etiqueta. */
-    borderRadius: 'var(--radius-sm)',
+    /* `--radius-acao`: canto levemente arredondado, comum a todos os
+       alvos interativos. Acima disso o botao perde o corte que define a
+       marca; abaixo, o canto ainda lia como duro demais. */
+    borderRadius: 'var(--radius-acao)',
     cursor: 'pointer',
     textDecoration: 'none',
     transition: 'var(--transition-action)',

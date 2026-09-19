@@ -69,7 +69,7 @@ export default function FaqItem({
               background: aberto ? 'var(--dende-500)' : 'transparent',
               color: aberto ? 'var(--sand-50)' : 'var(--ink-900)',
               border: 'var(--border-1) solid var(--ink-900)',
-              borderRadius: 'var(--radius-sm)',
+              borderRadius: 'var(--radius-acao)',
               transition: 'var(--transition-action)',
             }}
           >

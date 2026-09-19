@@ -4,6 +4,12 @@
   --radius-xs:2px;      /* tiles, chips */
   --radius-sm:4px;      /* inputs */
   --radius-pill:999px;  /* only for small counters/badges */
+  /* Alvo interativo (botao, item de FAQ, aba, controle da navegacao).
+     Adicao ao DS: o sistema so previa 4px para campo de formulario, e a
+     8px o canto suaviza sem o botao virar pilula, que descaracterizaria a
+     marca ("cut, not rounded"). Fica em token unico para os controles nao
+     divergirem entre si. */
+  --radius-acao:8px;
   --radius-arch:50% 50% 0 0 / 42% 42% 0 0;   /* doorway / arch crop for portraits */
   --radius-organic:58% 42% 47% 53% / 44% 56% 44% 56%; /* blob mask for image insets */
 
