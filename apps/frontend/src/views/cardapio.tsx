@@ -105,8 +105,6 @@ export default function CardapioView() {
                 key={d.nome}
                 variante="up"
                 indice={i % 3}
-                className="ds-stagger"
-                style={{ ['--stagger' as string]: i % 3 === 1 ? '48px' : '0px' }}
               >
                 <DishCard
                   indice={i + 1}

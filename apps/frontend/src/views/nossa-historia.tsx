@@ -121,7 +121,9 @@ export default function NossaHistoriaView() {
               legenda="A cozinha da casa"
             />
           </Reveal>
-          <Reveal variante="up" indice={1} className="ds-stagger" style={{ ['--stagger' as string]: '56px' }}>
+          {/* As tres fotos partem da mesma linha: com a do meio deslocada, a
+              faixa lia como desalinhada e nao como composicao. */}
+          <Reveal variante="up" indice={1}>
             <ImageFrame
               src="/fotos/namesa-baiana.webp"
               alt="Mesa servida no Bistrô Ancestral"

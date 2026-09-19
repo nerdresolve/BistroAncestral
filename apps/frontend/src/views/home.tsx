@@ -290,14 +290,12 @@ export default function HomeView() {
         </div>
 
         <div className="ds-grid-3" style={{ marginTop: 'var(--space-8)' }}>
+          {/* Sem `ds-stagger` nesta grade: a quebra de linha de base e recurso
+              de composicao editorial e, entre tres cartoes iguais, nao le como
+              intencao, le como cartao desalinhado. O proprio sistema trata o
+              recurso como opcional e ja o desliga no mobile. */}
           {DESTAQUES.map((d, i) => (
-            <Reveal
-              key={d.nome}
-              variante="up"
-              indice={i}
-              className="ds-stagger"
-              style={{ ['--stagger' as string]: i === 1 ? '56px' : '0px' }}
-            >
+            <Reveal key={d.nome} variante="up" indice={i}>
               <DishCard
                 indice={i + 1}
                 imagem={d.foto}
